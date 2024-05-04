@@ -1,0 +1,95 @@
+/* Login.css */
+#left {
+  position: relative;
+  border-bottom-right-radius: 30%;
+  background: #5fdd33;
+  overflow: hidden; /* Ensure child elements respect the rounded corner */
+}
+
+#shade1 {
+  position: absolute;
+  top: 20%;
+  /* left:15%; */
+  right: -10%;
+  width: 100%; /* Cover entire width */
+  height: 100%; /* Cover entire height */
+  z-index: 1; /* Place behind other content */
+}
+
+#shade2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%; /* Cover entire width */
+  height: 100%; /* Cover entire height */
+  z-index: 1; /* Place behind other content */
+}
+
+#title {
+  position: relative;
+  z-index: 999;
+}
+
+#right {
+  font-family: 'DM Sans', sans-serif;
+}
+
+#login {
+  background: #43cb43;
+  padding: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#login:hover {
+  background: #49e949;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  border-radius: 20px; /* Initial border radius, can be removed */
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px; /* Make it fully round (half of the height) */
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 16px; /* Adjust size of the circular button */
+  width: 16px; /* Adjust size of the circular button */
+  left: 4px;
+  top: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%; /* Make the button fully round */
+}
+
+input:checked + .slider {
+  background-color: #2ecc71; /* Green color */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2ecc71; /* Green outline on focus */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px); /* Move the slider to the right on toggle */
+}

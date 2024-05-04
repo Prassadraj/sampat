@@ -25,3 +25,4 @@ const allProduct = [
     img: "https://static.tnn.in/thumb/msid-109671370,thumbsize-940574,width-1280,height-720,resizemode-75/109671370.jpg",
   },
 ];
+export default allProduct

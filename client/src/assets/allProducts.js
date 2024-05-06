@@ -67,9 +67,9 @@ const allProduct = [
     A15 Bionic chip for lightning-fast performance`,
     img: [
       "https://m.media-amazon.com/images/I/61-r9zOKBCL._SX679_.jpg",
-      "https://m.media-amazon.com/images/I/6160lICVkhL._SX679_.jpg",
-      'https://m.media-amazon.com/images/I/61+Xpl1rD0L._SX679_.jpg',
-      'https://m.media-amazon.com/images/I/51pLA+hA5XL._SX679_.jpg'
+      "https://m.media-amazon.com/images/I/61J9KUops4L._SX679_.jpg",
+      'https://m.media-amazon.com/images/I/71e6luY333L._SX679_.jpg',
+      'https://m.media-amazon.com/images/I/61W4nsX-yZL._SX679_.jpg'
     ],
   },
 ];

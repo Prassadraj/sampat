@@ -12,7 +12,7 @@ function Item() {
           <img
             src={product.img}
             alt=""
-            width="100"
+            width="250"
             className="cursor-pointer rounded-lg shadow-md hover:shadow-lg"
           />
         </Link>

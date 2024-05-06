@@ -26,15 +26,15 @@ function Product() {
             src={img}
             alt={`Product ${index + 1}`}
             width="100px"
-            onClick={() => setIsHoveringImage(false)}
+            onClick={() => setImgURL(img)}
             style={{ cursor: "pointer" }}
-            onMouseEnter={(e) => setImgURL(img)}
           />
         ))}
       </div>
 
       {/* Right column for magnified image */}
-      <div className="w-1/2 pr-8 relative">
+      <div className="w-1/2 pr-8 relative" onMouseEnter={()=>setIsHoveringImage(true)}
+      onMouseLeave={(e)=>setIsHoveringImage(false)}>
         <ReactImageMagnify
           {...{
             smallImage: {
@@ -56,9 +56,7 @@ function Product() {
       {/* Right column for features */}
       <div className="w-1/2 pl-8">
         <h2 className="text-xl font-semibold mb-4">{product.desc}</h2>
-        {!isHoveringImage && (
-          <p className="text-gray-700">{product.features}</p>
-        )}
+        {!isHoveringImage && <p className="text-gray-700">{product.features}</p>}
       </div>
     </div>
   );

@@ -1,0 +1,23 @@
+/* Product.css */
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust based on your layout */
+  }
+  
+  .image-column {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Styling for the magnified image container */
+  .magnify-glass-container {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Position the magnified image next to the small image */
+    width: 400px; /* Adjust width of the magnified image container */
+    height: 400px; /* Adjust height of the magnified image container */
+    z-index: 999; /* Ensure the magnified image is above other content */
+  }
+  

@@ -2,43 +2,55 @@ import React, { useContext, useState } from "react";
 import { ProductDataContext } from "../Context/ProductData";
 import { useParams } from "react-router-dom";
 import ReactImageMagnify from "react-image-magnify";
+import "./product.css";
 
 function Product() {
   const { data } = useContext(ProductDataContext);
   const { id } = useParams();
   const [isHoveringImage, setIsHoveringImage] = useState(false);
-
   const product = data.find((product) => product.id === parseInt(id));
+  const [imgURL, setImgURL] = useState(product.img[0]);
+  console.log(imgURL);
 
   if (!product) {
     return <div className="text-red-500">Product not found</div>;
   }
 
   return (
-    <div className="flex max-w-4xl mx-auto my-8">
-      {/* Left column for image */}
-      <div
-        className="w-1/2 pr-8 relative" // Added 'relative' for positioning
-        onMouseEnter={() => setIsHoveringImage(true)}
-        onMouseLeave={() => setIsHoveringImage(false)}
-      >
+    <div className="flex max-w-4xl mx-auto my-28 gap-3">
+      {/* Left column for image thumbnails */}
+      <div className="flex flex-col gap-3">
+        {product.img.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt={`Product ${index + 1}`}
+            width="100px"
+            onClick={() => setIsHoveringImage(false)}
+            style={{ cursor: "pointer" }}
+            onMouseEnter={(e) => setImgURL(img)}
+          />
+        ))}
+      </div>
+
+      {/* Right column for magnified image */}
+      <div className="w-1/2 pr-8 relative">
         <ReactImageMagnify
           {...{
             smallImage: {
               alt: product.desc,
               isFluidWidth: true,
-              src: product.img,
+              src: imgURL, // Display the first image by default
             },
             largeImage: {
-              src: product.img,
-              width: 1200,
-              height: 1200,
+              src: imgURL, // Use the first image for magnification
+              width: 620,
+              height: 620,
             },
-            // Optional props can be added for customization
+            enlargedImageContainerStyle: { zIndex: 999 }, // Ensure magnifier is above other content
+            isHintEnabled: true, // Show hint to activate magnification
           }}
         />
-        {/* Optional: Add magnified image container styling */}
-        {/* <div className="magnify-glass-container"></div> */}
       </div>
 
       {/* Right column for features */}

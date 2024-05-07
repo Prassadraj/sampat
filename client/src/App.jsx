@@ -4,13 +4,13 @@ import Item from "./pages/items/Item";
 import Login from "./pages/Login/Login";
 import ProductDataProvider from "./Context/ProductData";
 import ProductDetail from "./Product/Product";
+import Demo from "./demo/Demo";
 
 function App() {
   return (
     <ProductDataProvider>
       <BrowserRouter>
         <div>
-
           <Routes>
             <Route element={<Item />} path="/" />
             <Route element={<Login />} path="/login" />

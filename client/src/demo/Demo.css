@@ -1,0 +1,11 @@
+.container{
+    position: relative;
+}
+.mainImg{
+    width: auto;
+    height: 50vh;
+}
+.magnifierImg{
+    width: 100px;
+    height: 100px;
+}

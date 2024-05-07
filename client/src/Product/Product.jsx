@@ -40,7 +40,7 @@ function Product() {
         <ReactImageMagnify
           {...{
             smallImage: {
-              alt: product.desc,
+              alt: product.name,
               isFluidWidth: true,
               src: imgURL, // Display the selected image
             },
@@ -57,7 +57,7 @@ function Product() {
 
       {/* Right column for features */}
       <div className="w-1/2 pl-8">
-        <h2 className="text-xl font-semibold mb-4">{product.desc}</h2>
+        <h2 className="text-xl font-semibold mb-4">{product.name}</h2>
         <motion.p
           className="text-sm text-justify md:text-xl md:w-96 text-gray-600 mt-4"
           initial={{ opacity: 0, x: -90 }}

@@ -23,18 +23,26 @@ function Product() {
         {product.img.map((img, index) => (
           <img
             key={index}
+            
             src={img}
             alt={`Product ${index + 1}`}
             width="100px"
             onClick={() => setImgURL(img)}
-            style={{ cursor: "pointer" }}
+            style={{
+              cursor: "pointer",
+              border: imgURL === img ? "2px solid black" : "none",
+              borderRadius:"10px"
+            }}
           />
         ))}
       </div>
 
       {/* Right column for magnified image */}
-      <div className="w-1/2 pr-8 relative" onMouseEnter={()=>setIsHoveringImage(true)}
-      onMouseLeave={(e)=>setIsHoveringImage(false)}>
+      <div
+        className="w-1/2 pr-8 relative"
+        onMouseEnter={() => setIsHoveringImage(true)}
+        onMouseLeave={(e) => setIsHoveringImage(false)}
+      >
         <ReactImageMagnify
           {...{
             smallImage: {
@@ -56,7 +64,9 @@ function Product() {
       {/* Right column for features */}
       <div className="w-1/2 pl-8">
         <h2 className="text-xl font-semibold mb-4">{product.desc}</h2>
-        {!isHoveringImage && <p className="text-gray-700">{product.features}</p>}
+        {!isHoveringImage && (
+          <p className="text-gray-700">{product.features}</p>
+        )}
       </div>
     </div>
   );

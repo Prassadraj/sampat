@@ -3,14 +3,13 @@ import { ProductDataContext } from "../Context/ProductData";
 import { useParams } from "react-router-dom";
 import ReactImageMagnify from "react-image-magnify";
 import "./product.css";
+import { motion } from "framer-motion";
 
 function Product() {
   const { data } = useContext(ProductDataContext);
   const { id } = useParams();
-  const [isHoveringImage, setIsHoveringImage] = useState(false);
   const product = data.find((product) => product.id === parseInt(id));
   const [imgURL, setImgURL] = useState(product.img[0]);
-  console.log(imgURL);
 
   if (!product) {
     return <div className="text-red-500">Product not found</div>;
@@ -23,7 +22,6 @@ function Product() {
         {product.img.map((img, index) => (
           <img
             key={index}
-            
             src={img}
             alt={`Product ${index + 1}`}
             width="100px"
@@ -31,27 +29,23 @@ function Product() {
             style={{
               cursor: "pointer",
               border: imgURL === img ? "2px solid black" : "none",
-              borderRadius:"10px"
+              borderRadius: "10px",
             }}
           />
         ))}
       </div>
 
       {/* Right column for magnified image */}
-      <div
-        className="w-1/2 pr-8 relative"
-        onMouseEnter={() => setIsHoveringImage(true)}
-        onMouseLeave={(e) => setIsHoveringImage(false)}
-      >
+      <div className="w-1/2 pr-8 relative">
         <ReactImageMagnify
           {...{
             smallImage: {
               alt: product.desc,
               isFluidWidth: true,
-              src: imgURL, // Display the first image by default
+              src: imgURL, // Display the selected image
             },
             largeImage: {
-              src: imgURL, // Use the first image for magnification
+              src: imgURL, // Use the selected image for magnification
               width: 620,
               height: 620,
             },
@@ -64,9 +58,14 @@ function Product() {
       {/* Right column for features */}
       <div className="w-1/2 pl-8">
         <h2 className="text-xl font-semibold mb-4">{product.desc}</h2>
-        {!isHoveringImage && (
-          <p className="text-gray-700">{product.features}</p>
-        )}
+        <motion.p
+          className="text-sm text-justify md:text-xl md:w-96 text-gray-600 mt-4"
+          initial={{ opacity: 0, x: -90 }}
+          animate={{ opacity: 1, x: 0 }} 
+          transition={{ duration: 0.5, delay: 0.9 }}
+        >
+          {product.features}
+        </motion.p>
       </div>
     </div>
   );

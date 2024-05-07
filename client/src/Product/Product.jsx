@@ -61,7 +61,7 @@ function Product() {
         <motion.p
           className="text-sm text-justify md:text-xl md:w-96 text-gray-600 mt-4"
           initial={{ opacity: 0, x: -90 }}
-          animate={{ opacity: 1, x: 0 }} 
+          animate={{ opacity: 1, x: 0 }} // Use x-axis for animation
           transition={{ duration: 0.5, delay: 0.9 }}
         >
           {product.features}

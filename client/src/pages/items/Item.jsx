@@ -1,20 +1,14 @@
 import React, { useContext } from "react";
-import { motion } from "framer-motion"; // Import motion from framer-motion
 import { ProductDataContext } from "../../Context/ProductData";
 import { Link } from "react-router-dom";
-import "./item.css";
-
+import './item.css'
 function Item() {
   const { data } = useContext(ProductDataContext);
 
   return (
     <div className="flex justify-center items-center h-screen gap-5 p-5">
       {data.map((product) => (
-        <Link
-          to={`/product/${product.id}`}
-          key={product.id}
-          className="hover:opacity-75 transition-opacity duration-300 ease-in-out"
-        >
+        <Link to={`/product/${product.id}`} key={product.id} className="hover:opacity-75 transition-opacity duration-300 ease-in-out">
           <img
             src={product.img}
             alt=""
@@ -23,7 +17,6 @@ function Item() {
           />
         </Link>
       ))}
-
     </div>
   );
 }

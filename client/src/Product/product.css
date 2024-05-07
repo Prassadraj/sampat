@@ -29,9 +29,20 @@
 /* Style for individual thumbnail image */
 .flex-col img {
   cursor: pointer;
+  border-radius: 10px; /* Add border radius to thumbnails */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
 }
 
-/* Ensure magnifier is above other content */
+/* Highlight selected thumbnail */
+.selected-thumbnail {
+  border: 2px solid black; /* Style for selected thumbnail */
+}
+
+/* Ensure magnifier is positioned correctly */
 .ReactImageMagnifyEnlargedImageContainer {
-  z-index: 999;
+  z-index: 999; /* Ensure magnified image appears above other content */
+  position: absolute; /* Position the magnified image container */
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Disable pointer events on the magnified image container */
 }

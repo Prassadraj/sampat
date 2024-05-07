@@ -3,8 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Item from "./pages/items/Item";
 import Login from "./pages/Login/Login";
 import ProductDataProvider from "./Context/ProductData";
-import ProductDetail from "./Product/Product";
+import ProductDetail from "./pages/Product/Product";
 import Demo from "./demo/Demo";
+import Home from "./component/Home/Home";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <BrowserRouter>
         <div>
           <Routes>
-            <Route element={<Item />} path="/" />
+            {/* <Route element={<Item />} path="/" /> */}
+            <Route element={<Home/>} path="/"/>
             <Route element={<Login />} path="/login" />
             <Route element={<ProductDetail />} path="/product/:id" />
           </Routes>

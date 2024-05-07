@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { ProductDataContext } from "../Context/ProductData";
+import { ProductDataContext } from "../../Context/ProductData";
 import { useParams } from "react-router-dom";
 import ReactImageMagnify from "react-image-magnify";
 import "./product.css";

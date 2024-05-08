@@ -1,25 +1,32 @@
 import React, { useContext, useState } from "react";
 import { ProductDataContext } from "../../Context/ProductData";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import ReactImageMagnify from "react-image-magnify";
 import "./product.css";
 import { motion } from "framer-motion";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 function Product() {
   const { data } = useContext(ProductDataContext);
   const { id } = useParams();
   const product = data.find((product) => product.id === parseInt(id));
   const [imgURL, setImgURL] = useState(product.img[0]);
-
+  const navigation = useNavigate();
   if (!product) {
     return <div className="text-red-500">Product not found</div>;
   }
   const relatedProducts = data.filter(
     (items) => items.same == product.same && items.id !== product.id
   );
-
   return (
     <div>
+      <Link to="/">
+        <FontAwesomeIcon
+          icon={faHome}
+          className="mt-10 ml-10 text-red-800 text-2xl"
+        />
+      </Link>
       <div className="flex max-w-4xl mx-auto my-28 gap-3">
         {/* Left column for image thumbnails */}
         <div className="flex flex-col gap-3">
@@ -75,6 +82,7 @@ function Product() {
       {relatedProducts.length > 0 && (
         <div>
           <h1 className="ml-52 mb-6 text-3xl">Related Products</h1>
+
           <div className="grid grid-cols-4 ml-44 gap-10">
             {relatedProducts.map((products) => (
               <Link
@@ -86,6 +94,7 @@ function Product() {
                   <img
                     src={products.img}
                     alt=""
+                    onClick={() => setImgURL(products.img)}
                     className="hover:opacity-75 transition-opacity duration-300 ease-in-out"
                     style={{ borderRadius: "10px" }}
                     width="200px"
@@ -97,7 +106,6 @@ function Product() {
           </div>
         </div>
       )}
-      
     </div>
   );
 }

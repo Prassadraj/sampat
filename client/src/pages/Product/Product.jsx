@@ -10,7 +10,8 @@ function Product() {
   const { id } = useParams();
   const product = data.find((product) => product.id === parseInt(id));
   const [imgURL, setImgURL] = useState(product.img[0]);
-
+  const related = data.find(product.same === data.same);
+  console.log(related);
   if (!product) {
     return <div className="text-red-500">Product not found</div>;
   }
@@ -67,10 +68,7 @@ function Product() {
           {product.features}
         </motion.p>
       </div>
-      <div className="flex justify-center items-center">
-        
-
-      </div>
+      <div className="flex justify-center items-center"></div>
     </div>
   );
 }

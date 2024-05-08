@@ -36,11 +36,12 @@ function Product() {
 
       <div className="flex max-w-5xl mx-auto my-20 gap-8">
         {/* Left column for image thumbnails */}
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 ">
           {product.img.map((img, index) => (
             <img
               key={index}
               src={img}
+              className="duration-700"
               alt={`Product ${index + 1}`}
               width="100px"
               onClick={() => setImgURL(img)}

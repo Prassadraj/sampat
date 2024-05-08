@@ -26,7 +26,7 @@ function Product() {
         className="mt-10 ml-10 text-red-800 text-2xl"
         onClick={() => navigation("/")}
       />
-      <div className="flex max-w-4xl mx-auto my-28 gap-3">
+      <div className="flex max-w-5xl mx-auto my-20 gap-8">
         {/* Left column for image thumbnails */}
         <div className="flex flex-col gap-3">
           {product.img.map((img, index) => (
@@ -80,7 +80,7 @@ function Product() {
       </div>
       {relatedProducts.length > 0 && (
         <div>
-          <h1 className="ml-52 mb-6 text-3xl">Related Products</h1>
+          <h1 className="ml-52  mb-6 text-3xl">Related Products</h1>
 
           <div className="grid grid-cols-4 ml-44 gap-10">
             {relatedProducts.map((products) => (

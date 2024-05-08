@@ -34,16 +34,15 @@ const allProduct = [
 
   {
     id: 3,
-    features: `Screen Size- Crisp image quality, and colors that pop, the 1.69 Inches HD Square display makes everything look larger than life.Always on Display-No, Peak Brightness-550 Nits
-    boAt Coins- Get vouchers/coupons that can be redeemed on our boAt Crest App basis your workouts!
-    Battery Time- Feature loaded Watch comes with upto 7 days battery life. Never miss out on the fun with ultimate battery life. *Battery life is dependent on usage of the watch.
-    Health Ecosystem- Create your own health and wellness ecosystem on the Crest App with Custom fitness plans, wellness crew, energy scores, sleep scores & more.`,
-    name: "boAt Wave Style Smart Watch",
+    name: "Fire-Boltt Ninja Call Pro Plus ",
+    features: `【1.83" HD Display Smart Watch】- The 46.48mm (1.83-inch) HD display makes the display clear and true-to-life, with vivid colours ensuring smooth readability and keeping the watch as exquisite to look at as when you first lay your eyes on it. The watch has a 280 NITS Peak Brightness
+    This fashion smart watch will work on a single charge for about 8 days (without Bluetooth calling) and about 5 Days with Bluetooth calling.
+    Charging Specs - The watch needs to be charged for 2 hours to reach 100%. The charger should be a 3.7V to 5V adapter or any laptop output. For a bare minimum of 20% charge the watch needs to be charged for about 30-40 mins`,
     img: [
-      "https://m.media-amazon.com/images/I/618fpS1lonL._SX679_.jpg",
-      "https://m.media-amazon.com/images/I/719iIRtXlJL._SX679_.jpg",
-      "https://m.media-amazon.com/images/I/71fWgwtP52L._SX679_.jpg",
-      "https://m.media-amazon.com/images/I/612gDhVLm-L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/41-zB3M31dL._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/81DEzbJ9ERL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71tOBelnDYL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71U-rEX7y5L._SX679_.jpg",
     ],
     same: "watch",
   },
@@ -139,17 +138,45 @@ const allProduct = [
     ],
     same: "lap",
   },
+
   {
     id: 10,
-    name: "Fire-Boltt Ninja Call Pro Plus ",
-    features: `【1.83" HD Display Smart Watch】- The 46.48mm (1.83-inch) HD display makes the display clear and true-to-life, with vivid colours ensuring smooth readability and keeping the watch as exquisite to look at as when you first lay your eyes on it. The watch has a 280 NITS Peak Brightness
-    This fashion smart watch will work on a single charge for about 8 days (without Bluetooth calling) and about 5 Days with Bluetooth calling.
-    Charging Specs - The watch needs to be charged for 2 hours to reach 100%. The charger should be a 3.7V to 5V adapter or any laptop output. For a bare minimum of 20% charge the watch needs to be charged for about 30-40 mins`,
+    features: `Screen Size- Crisp image quality, and colors that pop, the 1.69 Inches HD Square display makes everything look larger than life.Always on Display-No, Peak Brightness-550 Nits
+    boAt Coins- Get vouchers/coupons that can be redeemed on our boAt Crest App basis your workouts!
+    Battery Time- Feature loaded Watch comes with upto 7 days battery life. Never miss out on the fun with ultimate battery life. *Battery life is dependent on usage of the watch.
+    Health Ecosystem- Create your own health and wellness ecosystem on the Crest App with Custom fitness plans, wellness crew, energy scores, sleep scores & more.`,
+    name: "boAt Wave Style Smart Watch",
     img: [
-      "https://m.media-amazon.com/images/I/41-zB3M31dL._SX300_SY300_QL70_FMwebp_.jpg",
-      "https://m.media-amazon.com/images/I/81DEzbJ9ERL._SX679_.jpg",
-      "https://m.media-amazon.com/images/I/71tOBelnDYL._SX679_.jpg",
-      "https://m.media-amazon.com/images/I/71U-rEX7y5L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/618fpS1lonL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/719iIRtXlJL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71fWgwtP52L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/612gDhVLm-L._SX679_.jpg",
+    ],
+    same: "watch",
+  },
+  {
+    id: 11,
+    name: "Apple Watch Ultra",
+    features: `WHY APPLE WATCH ULTRA — Rugged and capable, built to meet the demands of endurance athletes, outdoor adventurers and water sports enthusiasts — with a specialised strap for each. Up to 36 hours of battery life, plus all the Apple Watch features that help you stay healthy, safe and connected.
+    EXTREMELY RUGGED, INCREDIBLY CAPABLE — 49-millimetre corrosion-resistant titanium case. Larger Digital Crown and more accessible buttons. 100-metre water resistance. Customisable Action button for instant physical control over a variety of functions.`,
+    img: [
+      "https://m.media-amazon.com/images/I/91z5KuonXrL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81LNgb-7FnL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/91g08EO6xoL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81mik1zN55L._SX679_.jpg",
+    ],
+    same: "watch",
+  },
+  {
+    id: 11,
+    name: "Apple Watch Ultra",
+    features: `WHY APPLE WATCH ULTRA — Rugged and capable, built to meet the demands of endurance athletes, outdoor adventurers and water sports enthusiasts — with a specialised strap for each. Up to 36 hours of battery life, plus all the Apple Watch features that help you stay healthy, safe and connected.
+    EXTREMELY RUGGED, INCREDIBLY CAPABLE — 49-millimetre corrosion-resistant titanium case. Larger Digital Crown and more accessible buttons. 100-metre water resistance. Customisable Action button for instant physical control over a variety of functions.`,
+    img: [
+      "https://m.media-amazon.com/images/I/91z5KuonXrL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81LNgb-7FnL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/91g08EO6xoL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81mik1zN55L._SX679_.jpg",
     ],
     same: "watch",
   },

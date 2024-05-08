@@ -10,65 +10,88 @@ function Product() {
   const { id } = useParams();
   const product = data.find((product) => product.id === parseInt(id));
   const [imgURL, setImgURL] = useState(product.img[0]);
-  const related = data.find(product.same === data.same);
-  console.log(related);
+
   if (!product) {
     return <div className="text-red-500">Product not found</div>;
   }
+  const relatedProducts = data.filter(
+    (items) => items.same == product.same && items.id !== product.id
+  );
 
   return (
-    <div className="flex max-w-4xl mx-auto my-28 gap-3">
-      {/* Left column for image thumbnails */}
-      <div className="flex flex-col gap-3">
-        {product.img.map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt={`Product ${index + 1}`}
-            width="100px"
-            onClick={() => setImgURL(img)}
-            style={{
-              cursor: "pointer",
-              border: imgURL === img ? "2px solid black" : "none",
-              borderRadius: "10px",
+    <div>
+      <div className="flex max-w-4xl mx-auto my-28 gap-3">
+        {/* Left column for image thumbnails */}
+        <div className="flex flex-col gap-3">
+          {product.img.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Product ${index + 1}`}
+              width="100px"
+              onClick={() => setImgURL(img)}
+              style={{
+                cursor: "pointer",
+                border: imgURL === img ? "2px solid black" : "none",
+                borderRadius: "10px",
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Right column for magnified image */}
+        <div className="w-1/2 pr-8 relative">
+          <ReactImageMagnify
+            {...{
+              smallImage: {
+                alt: product.name,
+                isFluidWidth: true,
+                src: imgURL, 
+              },
+              largeImage: {
+                src: imgURL,
+                width: 620,
+                height: 620,
+              },
+              enlargedImageContainerStyle: { zIndex: 999 }, 
+              isHintEnabled: true,
             }}
           />
-        ))}
-      </div>
+        </div>
 
-      {/* Right column for magnified image */}
-      <div className="w-1/2 pr-8 relative">
-        <ReactImageMagnify
-          {...{
-            smallImage: {
-              alt: product.name,
-              isFluidWidth: true,
-              src: imgURL, // Display the selected image
-            },
-            largeImage: {
-              src: imgURL, // Use the selected image for magnification
-              width: 620,
-              height: 620,
-            },
-            enlargedImageContainerStyle: { zIndex: 999 }, // Ensure magnifier is above other content
-            isHintEnabled: true, // Show hint to activate magnification
-          }}
-        />
+        {/* Right column for features */}
+        <div className="w-1/2 pl-8">
+          <h2 className="text-xl font-semibold mb-4">{product.name}</h2>
+          <motion.p
+            className="text-sm text-justify md:text-xl md:w-96 text-gray-600 mt-4"
+            initial={{ opacity: 0, x: -90 }}
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.2, delay: 0.4 }}
+          >
+            {product.features}
+          </motion.p>
+        </div>
       </div>
-
-      {/* Right column for features */}
-      <div className="w-1/2 pl-8">
-        <h2 className="text-xl font-semibold mb-4">{product.name}</h2>
-        <motion.p
-          className="text-sm text-justify md:text-xl md:w-96 text-gray-600 mt-4"
-          initial={{ opacity: 0, x: -90 }}
-          animate={{ opacity: 1, x: 0 }} // Use x-axis for animation
-          transition={{ duration: 0.5, delay: 0.9 }}
-        >
-          {product.features}
-        </motion.p>
-      </div>
-      <div className="flex justify-center items-center"></div>
+      {relatedProducts.length > 0 && (
+        <div>
+          <h1 className="ml-52 mb-6 text-3xl">
+            Related Products 
+          </h1>
+          <div className="grid grid-cols-4 ml-44 gap-10">
+            {relatedProducts.map((products) => (
+              <div key={products.id} className="flex flex-col items-center">
+                <img
+                  src={products.img}
+                  alt=""
+                  style={{ borderRadius: "10px" }}
+                  width="200px"
+                />
+                <p className="mt-5 mb-10">{products.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

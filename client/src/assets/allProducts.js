@@ -14,7 +14,7 @@ const allProduct = [
       "https://m.media-amazon.com/images/I/51+vJkbGtJL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51aHwMRyg7L._SX679_.jpg",
     ],
-    same:"phone"
+    same:"aipod"
   },
   {
     id: 2,

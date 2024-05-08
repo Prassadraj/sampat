@@ -5,8 +5,8 @@ import Item from '../../pages/items/Item'
 function Home() {
   return (
     <div>
-        <Nav/>
-        {/* <Item/> */}
+        {/* <Nav/> */}
+        <Item/>
     </div>
   )
 }

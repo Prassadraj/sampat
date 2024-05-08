@@ -168,17 +168,17 @@ const allProduct = [
     same: "watch",
   },
   {
-    id: 11,
-    name: "Apple Watch Ultra",
-    features: `WHY APPLE WATCH ULTRA — Rugged and capable, built to meet the demands of endurance athletes, outdoor adventurers and water sports enthusiasts — with a specialised strap for each. Up to 36 hours of battery life, plus all the Apple Watch features that help you stay healthy, safe and connected.
-    EXTREMELY RUGGED, INCREDIBLY CAPABLE — 49-millimetre corrosion-resistant titanium case. Larger Digital Crown and more accessible buttons. 100-metre water resistance. Customisable Action button for instant physical control over a variety of functions.`,
+    id: 12,
+    name: "Apple iPhone 15 (128 GB)",
+    features: `DYNAMIC ISLAND COMES TO IPHONE 15 — Dynamic Island bubbles up alerts and Live Activities — so you don’t miss them while you’re doing something else. You can see who’s calling, track your next ride, check your flight status, and so much more.
+    INNOVATIVE DESIGN — iPhone 15 features a durable color-infused glass and aluminum design. It’s splash, water, and dust resistant. The Ceramic Shield front is tougher than any smartphone glass. And the 6.1" Super Retina XDR display is up to 2x brighter in the sun compared to iPhone 14.`,
     img: [
-      "https://m.media-amazon.com/images/I/91z5KuonXrL._SX679_.jpg",
-      "https://m.media-amazon.com/images/I/81LNgb-7FnL._SX679_.jpg",
-      "https://m.media-amazon.com/images/I/91g08EO6xoL._SX679_.jpg",
-      "https://m.media-amazon.com/images/I/81mik1zN55L._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71v2jVh6nIL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/516IO6TPGIL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/712CBkmhLhL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61f4dTush1L._SX679_.jpg",
     ],
-    same: "watch",
+    same: "phone",
   },
 ];
 export default allProduct;

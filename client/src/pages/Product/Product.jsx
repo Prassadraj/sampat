@@ -67,6 +67,10 @@ function Product() {
           {product.features}
         </motion.p>
       </div>
+      <div className="flex justify-center items-center">
+        
+
+      </div>
     </div>
   );
 }

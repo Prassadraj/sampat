@@ -14,6 +14,7 @@ const allProduct = [
       "https://m.media-amazon.com/images/I/51+vJkbGtJL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51aHwMRyg7L._SX679_.jpg",
     ],
+    same:"phone"
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ const allProduct = [
       "https://m.media-amazon.com/images/I/61+Xpl1rD0L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51pLA+hA5XL._SX679_.jpg",
     ],
+    same:"lap"
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ const allProduct = [
       "https://m.media-amazon.com/images/I/71fWgwtP52L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/612gDhVLm-L._SX679_.jpg",
     ],
+    same:"watch"
   },
   {
     id: 4,
@@ -56,6 +59,7 @@ const allProduct = [
       "https://m.media-amazon.com/images/I/81rxJGhteqL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/61M0xBs9kRL._SX679_.jpg",
     ],
+    same:"phone"
   },
   {
     id: 5,
@@ -71,6 +75,8 @@ const allProduct = [
       "https://m.media-amazon.com/images/I/71e6luY333L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/61W4nsX-yZL._SX679_.jpg",
     ],
+    same:"phone"
   },
+  
 ];
 export default allProduct;

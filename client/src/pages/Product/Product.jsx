@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { ProductDataContext } from "../../Context/ProductData";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ReactImageMagnify from "react-image-magnify";
 import "./product.css";
 import { motion } from "framer-motion";
@@ -46,14 +46,14 @@ function Product() {
               smallImage: {
                 alt: product.name,
                 isFluidWidth: true,
-                src: imgURL, 
+                src: imgURL,
               },
               largeImage: {
                 src: imgURL,
                 width: 620,
                 height: 620,
               },
-              enlargedImageContainerStyle: { zIndex: 999 }, 
+              enlargedImageContainerStyle: { zIndex: 999 },
               isHintEnabled: true,
             }}
           />
@@ -65,7 +65,7 @@ function Product() {
           <motion.p
             className="text-sm text-justify md:text-xl md:w-96 text-gray-600 mt-4"
             initial={{ opacity: 0, x: -90 }}
-            animate={{ opacity: 1, x: 0 }} 
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.2, delay: 0.4 }}
           >
             {product.features}
@@ -74,24 +74,30 @@ function Product() {
       </div>
       {relatedProducts.length > 0 && (
         <div>
-          <h1 className="ml-52 mb-6 text-3xl">
-            Related Products 
-          </h1>
+          <h1 className="ml-52 mb-6 text-3xl">Related Products</h1>
           <div className="grid grid-cols-4 ml-44 gap-10">
             {relatedProducts.map((products) => (
-              <div key={products.id} className="flex flex-col items-center">
-                <img
-                  src={products.img}
-                  alt=""
-                  style={{ borderRadius: "10px" }}
-                  width="200px"
-                />
-                <p className="mt-5 mb-10">{products.name}</p>
-              </div>
+              <Link
+                to={`/product/${products.id}`}
+                key={products.id}
+                className="hover:opacity-75 transition-opacity duration-300 ease-in-out"
+              >
+                <div key={products.id} className="flex flex-col items-center">
+                  <img
+                    src={products.img}
+                    alt=""
+                    className="hover:opacity-75 transition-opacity duration-300 ease-in-out"
+                    style={{ borderRadius: "10px" }}
+                    width="200px"
+                  />
+                  <p className="mt-5 mb-10">{products.name}</p>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
       )}
+      
     </div>
   );
 }

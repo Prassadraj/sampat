@@ -5,7 +5,7 @@ import ReactImageMagnify from "react-image-magnify";
 import "./product.css";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { faBackward, faHome } from "@fortawesome/free-solid-svg-icons";
 
 function Product() {
   const { data } = useContext(ProductDataContext);
@@ -21,12 +21,11 @@ function Product() {
   );
   return (
     <div>
-      <Link to="/">
-        <FontAwesomeIcon
-          icon={faHome}
-          className="mt-10 ml-10 text-red-800 text-2xl"
-        />
-      </Link>
+      <FontAwesomeIcon
+        icon={faBackward}
+        className="mt-10 ml-10 text-red-800 text-2xl"
+        onClick={() => navigation("/")}
+      />
       <div className="flex max-w-4xl mx-auto my-28 gap-3">
         {/* Left column for image thumbnails */}
         <div className="flex flex-col gap-3">

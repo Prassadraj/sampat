@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { ProductDataContext } from "../../Context/ProductData";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import ReactImageMagnify from "react-image-magnify";
@@ -13,19 +13,27 @@ function Product() {
   const product = data.find((product) => product.id === parseInt(id));
   const [imgURL, setImgURL] = useState(product.img[0]);
   const navigation = useNavigate();
+
+  const topRef = useRef(null);
   if (!product) {
     return <div className="text-red-500">Product not found</div>;
   }
   const relatedProducts = data.filter(
     (items) => items.same == product.same && items.id !== product.id
   );
+  const handleRelatedProductClick = () => {
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <div>
+    <div ref={topRef}>
       <FontAwesomeIcon
         icon={faBackward}
         className="mt-10 ml-10 text-red-800 text-2xl"
         onClick={() => navigation("/")}
       />
+
       <div className="flex max-w-5xl mx-auto my-20 gap-8">
         {/* Left column for image thumbnails */}
         <div className="flex flex-col gap-3">
@@ -87,6 +95,7 @@ function Product() {
               <Link
                 to={`/product/${products.id}`}
                 key={products.id}
+                onClick={handleRelatedProductClick}
                 className="hover:opacity-75 transition-opacity duration-300 ease-in-out"
               >
                 <div key={products.id} className="flex flex-col items-center">

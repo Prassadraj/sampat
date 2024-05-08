@@ -139,5 +139,19 @@ const allProduct = [
     ],
     same: "lap",
   },
+  {
+    id: 10,
+    name: "Fire-Boltt Ninja Call Pro Plus ",
+    features: `【1.83" HD Display Smart Watch】- The 46.48mm (1.83-inch) HD display makes the display clear and true-to-life, with vivid colours ensuring smooth readability and keeping the watch as exquisite to look at as when you first lay your eyes on it. The watch has a 280 NITS Peak Brightness
+    This fashion smart watch will work on a single charge for about 8 days (without Bluetooth calling) and about 5 Days with Bluetooth calling.
+    Charging Specs - The watch needs to be charged for 2 hours to reach 100%. The charger should be a 3.7V to 5V adapter or any laptop output. For a bare minimum of 20% charge the watch needs to be charged for about 30-40 mins`,
+    img: [
+      "https://m.media-amazon.com/images/I/41-zB3M31dL._SX300_SY300_QL70_FMwebp_.jpg",
+      "https://m.media-amazon.com/images/I/81DEzbJ9ERL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71tOBelnDYL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71U-rEX7y5L._SX679_.jpg",
+    ],
+    same: "watch",
+  },
 ];
 export default allProduct;

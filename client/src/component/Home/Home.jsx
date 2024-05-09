@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from "../../pages/Nav/Nav";
 import Item from "../../pages/items/Item";
+import Contact from "../../pages/contact/Contact";
 
 function Home() {
   return (
@@ -21,6 +22,7 @@ function Home() {
           />
         </div>
       </div>
+      {/* <Contact/> */}
     </div>
   );
 }

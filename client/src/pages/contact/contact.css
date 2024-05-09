@@ -8,15 +8,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-  overflow-y: scroll;
-}
-body {
-  background: #373737;
-  font-family: 'Source Sans Pro', sans-serif;
-}
+
+
 
 .material-icons {font-size: 18px; margin-left: 4px;}
 

@@ -1,0 +1,13 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+#list li{
+    font-size: 20px;
+    font-weight: 500;
+}
+.selected {
+    color: #337357; 
+    border-bottom-width: 2px;
+    border-bottom-color: #337357; /* Border color for underline effect */
+  }
+  

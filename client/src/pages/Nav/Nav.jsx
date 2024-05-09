@@ -50,7 +50,7 @@ function Nav() {
     setIsLoading(true);
     const loadingTimeout = setTimeout(() => {
       setIsLoading(false);
-    }, 500);
+    }, 300);
 
     return () => {
       clearTimeout(loadingTimeout);

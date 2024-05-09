@@ -65,7 +65,7 @@ function Nav() {
         style={{ background: "#41B06E" }}
       >
         <div className="left">
-          <ul className="text-2xl flex gap-10" style={{ color: "#004225" }}>
+          <ul className="text-3xl flex gap-8" style={{ color: "#004225" }}>
             <li className="hover:-translate-y-1 ease-in-out duration-200">
               <FontAwesomeIcon icon={faFacebook} />
             </li>

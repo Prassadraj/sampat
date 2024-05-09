@@ -30,7 +30,7 @@ function Product() {
   return (
     <div>
       <div ref={topRef}>
-        <Nav />
+      <Nav />
 
         <div className="flex max-w-5xl mx-auto my-10 gap-8">
           {/* Left column for image thumbnails */}

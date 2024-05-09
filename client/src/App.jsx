@@ -6,6 +6,7 @@ import ProductDataProvider from "./Context/ProductData";
 import ProductDetail from "./pages/Product/Product";
 import Demo from "./demo/Demo";
 import Home from "./component/Home/Home";
+import Loading from "./component/loading/Loading";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route element={<Home/>} path="/"/>
             <Route element={<Login />} path="/login" />
             <Route element={<ProductDetail />} path="/product/:id" />
+            <Route element={<Loading/>} path="loading" />
           </Routes>
         </div>
       </BrowserRouter>

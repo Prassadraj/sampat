@@ -33,6 +33,7 @@ function Product() {
         className="mt-10 ml-10 text-red-800 text-2xl"
         onClick={() => navigation("/")}
       />
+     
 
       <div className="flex max-w-5xl mx-auto my-20 gap-8">
         {/* Left column for image thumbnails */}

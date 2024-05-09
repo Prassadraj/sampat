@@ -100,8 +100,7 @@ function Nav() {
           </ul>
         </div>
       </div>
-      <div className="flex justify-around items-center pl-32 pr-32 pt-3 w-ful border-b border-gray-300 shadow-md">
-        <div>
+      <div className="flex justify-around items-center pl-32 pr-32 pt-3 w-full border-b border-gray-300 shadow-md animated-border">        <div>
           <Link to="/">
             <img
               src="https://cpcdiagnostics.in/wp-content/uploads/2022/09/cpc-png-logo-bg-removed.png"

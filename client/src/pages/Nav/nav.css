@@ -14,4 +14,19 @@ body{
     border-bottom-width: 2px;
     border-bottom-color: #337357; /* Border color for underline effect */
   }
-  
+  .animated-border {
+    border-bottom: 2px solid transparent; /* Initial transparent border */
+    animation: borderAnimation 2s infinite; /* Apply animation infinitely */
+  }
+  @keyframes borderAnimation {
+    0% {
+      border-color: transparent; /* Start with transparent */
+    }
+    50% {
+      border-color: #8b8989; /* Change color midway */
+    }
+    100% {
+      border-color: transparent; /* Back to transparent */
+    }
+  }
+    

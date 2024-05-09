@@ -14,7 +14,7 @@ const allProduct = [
       "https://m.media-amazon.com/images/I/51+vJkbGtJL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51aHwMRyg7L._SX679_.jpg",
     ],
-    same: "aipod",
+    same: "airpod",
   },
   {
     id: 2,
@@ -90,7 +90,7 @@ const allProduct = [
       "https://m.media-amazon.com/images/I/61vBE3t4x1L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/61F5lcvJHLL._SX679_.jpg",
     ],
-    same: "aipod",
+    same: "airpod",
   },
   {
     id: 7,
@@ -105,7 +105,7 @@ const allProduct = [
       "https://m.media-amazon.com/images/I/61SrzBqUteL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/61gAcTx3SbL._SX679_.jpg",
     ],
-    same: "aipod",
+    same: "airpod",
   },
   {
     id: 8,

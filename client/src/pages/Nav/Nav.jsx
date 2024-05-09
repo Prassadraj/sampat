@@ -7,27 +7,54 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import "./nav.css";
-import { Link } from "react-router-dom";
-function Nav() {
-  const [selectedItem, setSelectedItem] = useState(0); // Default selected item index
+import { Link, useLocation } from "react-router-dom"; // Import useLocation hook
 
-  const handleItemClick = (index) => {
-    setSelectedItem(index);
-  };
+function Nav() {
+  const [selectedItem, setSelectedItem] = useState(""); // Default selected item state
+  const location = useLocation(); // Get current location
+
+  // Update selected item based on current location path
+  React.useEffect(() => {
+    switch (location.pathname) {
+      case "/":
+        setSelectedItem("Home");
+        break;
+      case "/about":
+        setSelectedItem("About");
+        break;
+      case "/brands":
+        setSelectedItem("Our Brands");
+        break;
+      case "/item":
+        setSelectedItem("Products");
+        break;
+      case "/career":
+        setSelectedItem("Career");
+        break;
+      case "/success":
+        setSelectedItem("Our Success");
+        break;
+      case "/blog":
+        setSelectedItem("Blog");
+        break;
+      case "/contact":
+        setSelectedItem("Contact");
+        break;
+      default:
+        setSelectedItem("");
+        break;
+    }
+  }, [location.pathname]); // Update when location path changes
+
   return (
     <div>
-      <div
-        className="flex justify-between pt-5 pb-3 pr-40 pl-40 "
-        style={{ background: "#7ABA78" }}
-      >
+      <div className="flex justify-between pt-5 pb-3 pr-40 pl-40" style={{ background: "#41B06E" }}>
         <div className="left">
-          <ul className="text-2xl flex gap-10  " style={{ color: "#004225" }}>
+          <ul className="text-2xl flex gap-10" style={{ color: "#004225" }}>
             <li className="hover:-translate-y-1 ease-in-out duration-200">
-              {" "}
               <FontAwesomeIcon icon={faFacebook} />
             </li>
             <li className="hover:-translate-y-1 ease-in-out duration-200">
-              {" "}
               <FontAwesomeIcon icon={faEnvelope} />
             </li>
             <li className="hover:-translate-y-1 ease-in-out duration-200">
@@ -47,81 +74,43 @@ function Nav() {
                 rel="noopener noreferrer"
                 className="flex items-center cursor-pointer"
               >
-                <FontAwesomeIcon
-                  icon={faWhatsapp}
-                  className="text-3xl mr-2"
-                  style={{ color: "#004225" }}
-                />
+                <FontAwesomeIcon icon={faWhatsapp} className="text-3xl mr-2" style={{ color: "#004225" }} />
                 Chat with Expert
               </a>
             </li>
           </ul>
         </div>
       </div>
-      <div
-        class="flex justify-around items-center pl-32 pr-32 pt-3 w-ful border-b border-gray-300 shadow-md "
-        // style={{ background: "#FEFDED" }}
-      >
+      <div className="flex justify-around items-center pl-32 pr-32 pt-3 w-ful border-b border-gray-300 shadow-md">
         <div>
-          <img
-            src="https://cpcdiagnostics.in/wp-content/uploads/2022/09/cpc-png-logo-bg-removed.png"
-            alt=""
-          />
+        <Link to="/">
+          <img src="https://cpcdiagnostics.in/wp-content/uploads/2022/09/cpc-png-logo-bg-removed.png" alt="" />
+        </Link>
         </div>
         <ul className="flex gap-7" id="list">
-          <Link to={"/"}>
-            <li
-              className={`cursor-pointer ${
-                selectedItem === 0 ? "selected" : ""
-              }`}
-              onClick={() => handleItemClick(0)}
-            >
-              Home
-            </li>
-          </Link>
-          <li
-            className={`cursor-pointer ${selectedItem === 1 ? "selected" : ""}`}
-            onClick={() => handleItemClick(1)}
-          >
-            About
+          <li className={`cursor-pointer ${selectedItem === "Home" ? "selected" : ""}`}>
+            <Link to="/">Home</Link>
           </li>
-          <li
-            className={`cursor-pointer ${selectedItem === 2 ? "selected" : ""}`}
-            onClick={() => handleItemClick(2)}
-          >
-            Our Brands
+          <li className={`cursor-pointer ${selectedItem === "About" ? "selected" : ""}`}>
+            <Link to="/about">About</Link>
           </li>
-
-          <li
-            className={`cursor-pointer ${selectedItem === 3 ? "selected" : ""}`}
-            onClick={() => handleItemClick(3)}
-          >
-            <Link to={"/item"}>Products</Link>
+          <li className={`cursor-pointer ${selectedItem === "Our Brands" ? "selected" : ""}`}>
+            <Link to="/brands">Our Brands</Link>
           </li>
-
-          <li
-            className={`cursor-pointer ${selectedItem === 4 ? "selected" : ""}`}
-            onClick={() => handleItemClick(4)}
-          >
-            Career
+          <li className={`cursor-pointer ${selectedItem === "Products" ? "selected" : ""}`}>
+            <Link to="/item">Products</Link>
           </li>
-          <li
-            className={`cursor-pointer ${selectedItem === 5 ? "selected" : ""}`}
-            onClick={() => handleItemClick(5)}
-          >
-            Our Success
+          <li className={`cursor-pointer ${selectedItem === "Career" ? "selected" : ""}`}>
+            <Link to="/career">Career</Link>
           </li>
-          <li
-            className={`cursor-pointer ${selectedItem === 6 ? "selected" : ""}`}
-            onClick={() => handleItemClick(6)}
-          >
-            Blog
+          <li className={`cursor-pointer ${selectedItem === "Our Success" ? "selected" : ""}`}>
+            <Link to="/success">Our Success</Link>
           </li>
-          <li
-            className={`cursor-pointer ${selectedItem === 7 ? "selected" : ""}`}
-            onClick={() => handleItemClick(7)}
-          >
-            Contact
+          <li className={`cursor-pointer ${selectedItem === "Blog" ? "selected" : ""}`}>
+            <Link to="/blog">Blog</Link>
+          </li>
+          <li className={`cursor-pointer ${selectedItem === "Contact" ? "selected" : ""}`}>
+            <Link to="/contact">Contact</Link>
           </li>
         </ul>
       </div>

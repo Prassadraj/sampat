@@ -62,7 +62,7 @@ function Nav() {
       {isLoading && <Loading />}
       <div
         className="flex justify-between pt-5 pb-3 pr-40 pl-40"
-        style={{ background: "#41B06E" }}
+        style={{ background: "#F0EBE3" }}
       >
         <div className="left">
           <ul className="text-3xl flex gap-8" style={{ color: "#004225" }}>
@@ -100,7 +100,8 @@ function Nav() {
           </ul>
         </div>
       </div>
-      <div className="flex justify-around items-center pl-32 pr-32 pt-3 w-full border-b border-gray-300 shadow-md animated-border">        <div>
+      <div className="flex justify-around items-center pl-32 pr-32 pt-3 w-full border-b border-gray-300 shadow-md animated-border"
+      style={{background:"#F6F5F2"}}>        <div>
           <Link to="/">
             <img
               src="https://cpcdiagnostics.in/wp-content/uploads/2022/09/cpc-png-logo-bg-removed.png"

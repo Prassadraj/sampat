@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -7,14 +7,14 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import "./nav.css";
-import { Link, useLocation } from "react-router-dom"; // Import useLocation hook
+import { Link, useLocation } from "react-router-dom";
 
 function Nav() {
   const [selectedItem, setSelectedItem] = useState(""); // Default selected item state
-  const location = useLocation(); // Get current location
+  const location = useLocation(); 
 
-  // Update selected item based on current location path
-  React.useEffect(() => {
+ 
+  useEffect(() => {
     switch (location.pathname) {
       case "/":
         setSelectedItem("Home");
@@ -81,13 +81,13 @@ function Nav() {
           </ul>
         </div>
       </div>
-      <div className="flex justify-around items-center pl-32 pr-32 pt-3 w-ful border-b border-gray-300 shadow-md">
+      <div  className="flex justify-around items-center pl-32 pr-32 pt-3 w-ful border-b border-gray-300 shadow-md">
         <div>
         <Link to="/">
           <img src="https://cpcdiagnostics.in/wp-content/uploads/2022/09/cpc-png-logo-bg-removed.png" alt="" />
         </Link>
         </div>
-        <ul className="flex gap-7" id="list">
+        <ul className="flex gap-7 uppercase" id="list">
           <li className={`cursor-pointer ${selectedItem === "Home" ? "selected" : ""}`}>
             <Link to="/">Home</Link>
           </li>

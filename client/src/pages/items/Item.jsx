@@ -12,7 +12,7 @@ function Item() {
     <div>
       <Nav />
       <div className="flex flex-col items-center mt-5">
-        <p className="text-3xl font-bold mb-5" style={{fontFamily:"Poppins"}}>Products</p>
+        <p className="text-3xl font-bold mb-5 uppercase" id="title">Products</p>
         <div className="flex justify-center gap-5 p-5">
           {productsToShow.map((product) => (
             <Link

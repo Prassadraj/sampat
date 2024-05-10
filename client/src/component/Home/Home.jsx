@@ -9,7 +9,7 @@ import { faFlaskVial } from "@fortawesome/free-solid-svg-icons";
 function Home() {
   return (
     <div className="">
-      <FontAwesomeIcon icon={faFlaskVial} rotation={-30} style={{color: "#05f096",}} />
+      {/* <FontAwesomeIcon icon={faFlaskVial} rotation={-30} style={{color: "#05f096",}} /> */}
       <Nav />
       {/* <Item/> */}
       <div className="">

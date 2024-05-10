@@ -15,10 +15,10 @@ function App() {
         <div>
           <Routes>
             <Route element={<Item />} path="/item" />
-            <Route element={<Home/>} path="/"/>
+            <Route element={<Home />} path="/" />
             <Route element={<Login />} path="/login" />
             <Route element={<ProductDetail />} path="/product/:id" />
-            <Route element={<Loading/>} path="loading" />
+            <Route element={<Loading />} path="loading" />
           </Routes>
         </div>
       </BrowserRouter>

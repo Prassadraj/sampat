@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBackward, faHome } from "@fortawesome/free-solid-svg-icons";
 import Nav from "../Nav/Nav";
+import { Cursor } from "../../component/Cursor";
 
 function Product() {
   const { data } = useContext(ProductDataContext);
@@ -114,6 +115,7 @@ function Product() {
           </div>
         )}
       </div>
+  
     </div>
   );
 }

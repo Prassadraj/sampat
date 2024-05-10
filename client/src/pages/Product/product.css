@@ -1,9 +1,13 @@
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .product-image {
-    cursor: pointer;
-    border-radius: 10px;
-    transition: border-color 0.3s ease, opacity 0.3s ease; /* Define transition properties */
-  }
-  
+  cursor: pointer;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, opacity 0.3s ease; /* Define transition properties */
+}

@@ -2,10 +2,14 @@ import React from "react";
 import Nav from "../../pages/Nav/Nav";
 import Item from "../../pages/items/Item";
 import Contact from "../../pages/contact/Contact";
+import { Cursor } from "../Cursor";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFlaskVial } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   return (
-    <div>
+    <div className="">
+      <FontAwesomeIcon icon={faFlaskVial} rotation={-30} style={{color: "#05f096",}} />
       <Nav />
       {/* <Item/> */}
       <div className="">
@@ -23,6 +27,7 @@ function Home() {
         </div>
       </div>
       {/* <Contact/> */}
+      <Cursor/>
     </div>
   );
 }

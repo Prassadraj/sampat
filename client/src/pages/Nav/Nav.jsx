@@ -15,6 +15,7 @@ function Nav() {
   const [selectedItem, setSelectedItem] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
+  const [animateOnce, setAnimateOnce] = useState(true);
 
   useEffect(() => {
     switch (location.pathname) {
@@ -57,12 +58,17 @@ function Nav() {
       clearTimeout(loadingTimeout);
     };
   }, [location.pathname]);
-
+  useEffect(() => {
+    // Disable further animations after the initial animation
+    if (animateOnce) {
+      setAnimateOnce(false);
+    }
+  }, [animateOnce]);
   return (
     <div>
       {isLoading && <Loading />}
       <div
-        className="flex justify-between pt-5 pb-3 pr-40 pl-40"
+        className="flex justify-between pt-5 pb-3 pr-40 pl-40 animate__animated animate__bounceInDown "
         style={{ background: "#F0EBE3" }}
       >
         <div className="left">
@@ -101,8 +107,12 @@ function Nav() {
           </ul>
         </div>
       </div>
-      <div className="flex justify-around items-center pl-32 pr-32 pt-3 w-full border-b border-gray-300 shadow-md animated-border"
-      style={{background:"#F6F5F2"}}>        <div>
+      <div
+        className="flex justify-around items-center pl-32 pr-32 pt-3 w-full border-b border-gray-300 shadow-md animated-border animate__animated  animate__delay-1s"
+        style={{ background: "#F6F5F2" }}
+      >
+        {" "}
+        <div>
           <Link to="/">
             <img
               src="https://cpcdiagnostics.in/wp-content/uploads/2022/09/cpc-png-logo-bg-removed.png"
@@ -169,7 +179,7 @@ function Nav() {
           </li>
         </ul>
       </div>
-      <Cursor/>
+      <Cursor />
     </div>
   );
 }

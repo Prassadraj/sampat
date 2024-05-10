@@ -2,7 +2,7 @@ import { faFlaskVial } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useRef, useState } from "react";
 
-const CURSOR_SPEED = 0.08;
+const CURSOR_SPEED = 1;
 
 let mouseX = -10;
 let mouseY = -10;

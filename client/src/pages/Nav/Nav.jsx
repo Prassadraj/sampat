@@ -112,56 +112,56 @@ function Nav() {
         </div>
         <ul className="flex gap-7 uppercase" id="list">
           <li
-            className={`cursor-pointer ${
+            className={`cursor-pointer hover:underline ${
               selectedItem === "Home" ? "selected" : ""
             }`}
           >
             <Link to="/">Home</Link>
           </li>
           <li
-            className={`cursor-pointer ${
+            className={`cursor-pointer hover:underline ${
               selectedItem === "About" ? "selected" : ""
             }`}
           >
             <Link to="/about">About</Link>
           </li>
           <li
-            className={`cursor-pointer ${
+            className={`cursor-pointer hover:underline ${
               selectedItem === "Our Brands" ? "selected" : ""
             }`}
           >
             <Link to="/brands">Our Brands</Link>
           </li>
           <li
-            className={`cursor-pointer ${
+            className={`cursor-pointer hover:underline ${
               selectedItem === "Products" ? "selected" : ""
             }`}
           >
             <Link to="/item">Products</Link>
           </li>
           <li
-            className={`cursor-pointer ${
+            className={`cursor-pointer hover:underline ${
               selectedItem === "Career" ? "selected" : ""
             }`}
           >
             <Link to="/career">Career</Link>
           </li>
           <li
-            className={`cursor-pointer ${
+            className={`cursor-pointer hover:underline ${
               selectedItem === "Our Success" ? "selected" : ""
             }`}
           >
             <Link to="/success">Our Success</Link>
           </li>
           <li
-            className={`cursor-pointer ${
+            className={`cursor-pointer hover:underline ${
               selectedItem === "Blog" ? "selected" : ""
             }`}
           >
             <Link to="/blog">Blog</Link>
           </li>
           <li
-            className={`cursor-pointer ${
+            className={`cursor-pointer hover:underline ${
               selectedItem === "Contact" ? "selected" : ""
             }`}
           >

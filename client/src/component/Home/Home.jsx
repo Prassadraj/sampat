@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlaskVial } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
-
   return (
     <div className="">
       <Nav />
@@ -24,8 +23,6 @@ function Home() {
           alt=""
         />
       </div>
-
-
     </div>
   );
 }

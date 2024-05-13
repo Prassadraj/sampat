@@ -77,7 +77,7 @@ function Nav() {
     };
   }, []);
   return (
-    <div className="fixed w-full block z-50 top-0">
+    <div className="fixed w-full block z-50 top-4">
       {isLoading && <Loading />}
       <div
         className=" flex justify-between pt-0 pb-3 px-4 sm:px-8 lg:px-10 xl:px-32 animate__animated animate__bounceInDown"

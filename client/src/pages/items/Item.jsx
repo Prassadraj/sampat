@@ -80,7 +80,9 @@ function Item() {
                   className="block cursor-pointer"
                 />
                 <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                  <p className="text-white text-lg font-bold">View Details</p>
+                  <p className=" text-lg font-bold" style={{
+                    color:"#08f58e"
+                  }}>View Details</p>
                 </div>
               </Link>
             ))}

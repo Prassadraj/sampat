@@ -40,6 +40,11 @@ function Product() {
       window.removeEventListener("scroll", scroll);
     };
   }, []);
+  useEffect(() => {
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [id]);
 
   return (
     <div className="absolute top-0" ref={topRef}>

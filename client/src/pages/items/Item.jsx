@@ -16,7 +16,7 @@ function Item() {
     <div>
       <Nav />
 
-      <div className="flex justify-around flex-col items-center mt-48">
+      <div className="flex justify-around flex-col items-center mt-28">
         {/* <p className="text-3xl font-bold mb-5 uppercase" id="title">
           Products
         </p> */}

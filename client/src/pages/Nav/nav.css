@@ -8,11 +8,30 @@ body{
     font-style: normal;
     /* color: #16ba73; */
 }
-#mid li:hover{
-  color: #337357; 
-  border-bottom-width: 2px;
-  border-bottom-color: #337357;
+#mid li {
+  position: relative; /* Needed for positioning the ::after pseudo-element */
 }
+
+#mid li::after {
+  content: ""; /* Required to create a pseudo-element */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initial width of the underline */
+  height: 2px; /* Height of the underline */
+  background-color: transparent; /* Transparent initially */
+  transition: width 0.3s ease, background-color 0.3s ease; /* Transition for width and color */
+}
+
+#mid li:hover {
+  color: #337357;
+}
+
+#mid li:hover::after {
+  width: 100%; /* Increase width to 100% on hover */
+  background-color: #337357; /* Color of the underline on hover */
+}
+
 #wp:hover{
   color: #337357; 
 }
@@ -23,6 +42,7 @@ body{
     border-bottom-width: 2px;
     border-bottom-color: #337357; /* Border color for underline effect */
   }
+
   .animated-border {
     border-bottom: 2px solid transparent; /* Initial transparent border */
     animation: borderAnimation 2s infinite; /* Apply animation infinitely */

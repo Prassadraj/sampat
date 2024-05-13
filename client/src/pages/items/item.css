@@ -1,14 +1,36 @@
 /* body{
     background: #CDE8E5;
 } */
-#title{
-    font-family: "Varela", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    
+#title {
+  font-family: "Varela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-.heading li:hover{
-    color: #337357; 
-    border-bottom-width: 2px;
-    border-bottom-color: #337357;
-  }
+.heading li:hover {
+  color: #337357;
+  border-bottom-width: 2px;
+  border-bottom-color: #337357;
+}
+.heading li {
+  position: relative; /* Needed for positioning the ::after pseudo-element */
+}
+
+.heading li::after {
+  content: ""; /* Required to create a pseudo-element */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; /* Initial width of the underline */
+  height: 2px; /* Height of the underline */
+  background-color: transparent; /* Transparent initially */
+  transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out; /* Transition for width and color */
+}
+
+.heading li:hover {
+  color: #337357;
+}
+
+.heading li:hover::after {
+  width: 100%; /* Increase width to 100% on hover */
+  background-color: #337357; /* Color of the underline on hover */
+}

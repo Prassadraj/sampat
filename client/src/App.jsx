@@ -7,6 +7,7 @@ import ProductDetail from "./pages/Product/Product";
 import Demo from "./demo/Demo";
 import Home from "./component/Home/Home";
 import Loading from "./component/loading/Loading";
+import { Cursor } from "./component/Cursor";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
+     
     </ProductDataProvider>
   );
 }

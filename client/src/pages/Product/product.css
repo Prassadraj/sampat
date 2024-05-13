@@ -1,11 +1,15 @@
+/* Global Styles */
+
 body {
   font-family: "Poppins", sans-serif;
-
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  scrollbar-width: none; /* Hide scrollbar on Firefox */
 }
+
+
+
+/* Specific Component Styles */
+
+
 .product-image {
   cursor: pointer;
   border-radius: 10px;

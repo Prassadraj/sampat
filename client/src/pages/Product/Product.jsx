@@ -15,6 +15,7 @@ function Product() {
   const product = data.find((product) => product.id === parseInt(id));
   const [imgURL, setImgURL] = useState(product.img[0]);
   const navigation = useNavigate();
+  const [measure, setMeasure] = useState(0);
 
   const topRef = useRef(null);
   if (!product) {
@@ -28,21 +29,36 @@ function Product() {
       topRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
-  return (
-    <div>
-      <div ref={topRef}>
-      <Nav />
+  const scroll = () => {
+    setMeasure(window.scrollY);
+  };
 
-        <div className="flex max-w-5xl mx-auto my-10 gap-8">
+  useEffect(() => {
+    window.addEventListener("scroll", scroll);
+
+    return () => {
+      window.removeEventListener("scroll", scroll);
+    };
+  }, []);
+
+  return (
+    <div className="absolute top-0" ref={topRef}>
+      <div className="product">
+        <Nav />
+
+        <div className="flex w-full ml-52 overflow-x-hidden mt-52 my-10 gap-8">
           {/* Left column for image thumbnails */}
-          <div className="flex flex-col gap-3 ">
+          <div
+            className="flex flex-col gap-3 "
+            style={{ transform: `translateX(-${measure}px)` }}
+          >
             {product.img.map((img, index) => (
               <img
                 key={index}
                 src={img}
                 className="duration-700"
                 alt={`Product ${index + 1}`}
-                width="100px"
+                width="90px"
                 onClick={() => setImgURL(img)}
                 style={{
                   cursor: "pointer",
@@ -54,7 +70,10 @@ function Product() {
           </div>
 
           {/* Right column for magnified image */}
-          <div className="w-1/2 pr-8 relative">
+          <div
+            className="w-96 pr-8 relative z-10"
+            style={{ transform: `translateY(-${measure * 2}px)` }}
+          >
             <ReactImageMagnify
               {...{
                 smallImage: {
@@ -74,7 +93,10 @@ function Product() {
           </div>
 
           {/* Right column for features */}
-          <div className="w-1/2 pl-8">
+          <div
+            className="w-1/2 pl-8"
+            style={{ transform: `translateX(${measure * 4}px)` }}
+          >
             <h2 className="text-xl font-semibold mb-4">{product.name}</h2>
             <motion.p
               className="text-sm text-justify md:text-xl md:w-96 text-gray-600 mt-4"
@@ -86,36 +108,40 @@ function Product() {
             </motion.p>
           </div>
         </div>
-        {relatedProducts.length > 0 && (
-          <div>
-            <h1 className="ml-52  mb-6 text-3xl">Related Products</h1>
+        <div className="h-64 mt-10">
+          {relatedProducts.length > 0 && (
+            <div style={{ transform: `translateY(-${measure - 50}px)` }}>
+              <h1 className="ml-52  mb-6 text-3xl">Related Products</h1>
 
-            <div className="grid grid-cols-4 ml-44 gap-10">
-              {relatedProducts.map((products) => (
-                <Link
-                  to={`/product/${products.id}`}
-                  key={products.id}
-                  onClick={handleRelatedProductClick}
-                  className="hover:opacity-75 transition-opacity duration-300 ease-in-out"
-                >
-                  <div key={products.id} className="flex flex-col items-center">
-                    <img
-                      src={products.img}
-                      alt=""
-                      onClick={() => setImgURL(products.img)}
-                      className="hover:opacity-75 transition-opacity duration-300 ease-in-out"
-                      style={{ borderRadius: "10px" }}
-                      width="200px"
-                    />
-                    <p className="mt-5 mb-10">{products.name}</p>
-                  </div>
-                </Link>
-              ))}
+              <div className="grid grid-cols-4 ml-44 gap-10">
+                {relatedProducts.map((products) => (
+                  <Link
+                    to={`/product/${products.id}`}
+                    key={products.id}
+                    onClick={handleRelatedProductClick}
+                    className="hover:opacity-75 transition-opacity duration-300 ease-in-out"
+                  >
+                    <div
+                      key={products.id}
+                      className="flex flex-col items-center"
+                    >
+                      <img
+                        src={products.img}
+                        alt=""
+                        onClick={() => setImgURL(products.img)}
+                        className="hover:opacity-75 transition-opacity duration-300 ease-in-out"
+                        style={{ borderRadius: "10px" }}
+                        width="200px"
+                      />
+                      <p className="mt-5 mb-10">{products.name}</p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </div>
-  
     </div>
   );
 }

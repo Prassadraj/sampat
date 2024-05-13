@@ -12,11 +12,12 @@ function Item() {
       ? data
       : data.filter((datas) => datas.same == selectedItems);
 
+
   return (
     <div>
       <Nav />
 
-      <div className="flex flex-col items-center mt-5">
+      <div className="flex flex-col items-center mt-48">
         {/* <p className="text-3xl font-bold mb-5 uppercase" id="title">
           Products
         </p> */}
@@ -78,7 +79,6 @@ function Item() {
                   alt=""
                   width="250px"
                   className="block cursor-pointer"
-                 
                 />
                 <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out">
                   <p className="text-white text-lg font-bold">View Details</p>

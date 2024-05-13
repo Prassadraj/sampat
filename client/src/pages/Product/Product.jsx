@@ -134,7 +134,7 @@ function Product() {
                         src={products.img}
                         alt=""
                         onClick={() => setImgURL(products.img)}
-                        className="hover:opacity-75 transition-opacity duration-300 ease-in-out"
+                        className="hover:opacity-90 shadow-lg transition-opacity duration-300 ease-in-out"
                         style={{ borderRadius: "10px" }}
                         width="200px"
                       />

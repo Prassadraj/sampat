@@ -6,31 +6,87 @@
   font-weight: 400;
   font-style: normal;
 }
-.heading li:hover {
-  color: #337357;
-  border-bottom-width: 2px;
-  border-bottom-color: #337357;
-}
-.heading li {
-  position: relative; /* Needed for positioning the ::after pseudo-element */
-}
-
-.heading li::after {
-  content: ""; /* Required to create a pseudo-element */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0; /* Initial width of the underline */
-  height: 2px; /* Height of the underline */
-  background-color: transparent; /* Transparent initially */
-  transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out; /* Transition for width and color */
-}
-
-.heading li:hover {
-  color: #337357;
-}
-
-.heading li:hover::after {
-  width: 100%; /* Increase width to 100% on hover */
-  background-color: #337357; /* Color of the underline on hover */
-}
+/* Container styling */
+#heading {
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    width: 260px;
+    height: calc(80vh - 40px); /* Adjusted for top margin and bottom margin */
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    overflow-y: auto; /* Enable scrolling if needed */
+  }
+  
+  /* List styling */
+  #heading ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px; /* Top padding for the list */
+    gap: 20px; /* Vertical gap between list items */
+  }
+  
+  /* List item styling */
+  #heading li {
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a5568; /* Default text color */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  /* Active (selected) item styling */
+  #heading li.active {
+    color: #1a202c; /* Darker color for active item */
+  }
+  
+  /* Underline effect */
+  #heading li::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Position the underline below the text */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: transparent;
+    transition: width 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  /* Underline effect on hover */
+  #heading li:hover::after {
+    width: 100%; /* Expand the underline to full width on hover */
+    background-color: #48bb78; /* Green underline color on hover */
+  }
+  
+  /* Container hover effect */
+  #heading:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  /* Scrollbar styling (if needed) */
+  #heading::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  #heading::-webkit-scrollbar-track {
+    background: #f7fafc; /* Light background color */
+  }
+  
+  #heading::-webkit-scrollbar-thumb {
+    background-color: #cbd5e0; /* Scrollbar thumb color */
+    border-radius: 4px;
+  }
+  
+  /* Optional: Responsive adjustments */
+  @media (max-width: 768px) {
+    #heading {
+      width: 100%; /* Full width on smaller screens */
+      left: 0;
+      border-radius: 0; /* No border radius on small screens */
+    }
+  }
+  

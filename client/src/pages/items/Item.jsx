@@ -12,7 +12,6 @@ function Item() {
       ? data
       : data.filter((datas) => datas.same == selectedItems);
 
-
   return (
     <div>
       <Nav />
@@ -21,43 +20,43 @@ function Item() {
         {/* <p className="text-3xl font-bold mb-5 uppercase" id="title">
           Products
         </p> */}
-        <div>
+        <div className="heading">
           <ul className="flex gap-20 uppercase">
             <li
-              className={`cursor-pointer text-2xl hover:underline ${
-                selectedItems == "all" ? "underline" : " "
+              className={`cursor-pointer text-2xl  ${
+                selectedItems == "all" ? "text-green-700 border-b-2 border-green-700" : " "
               }`}
               onClick={() => setSelectedItems("all")}
             >
               All
             </li>
             <li
-              className={`cursor-pointer text-2xl hover:underline ${
-                selectedItems == "phone" ? "underline" : " "
+              className={`cursor-pointer text-2xl  ${
+                selectedItems == "phone" ? "text-green-700 border-b-2 border-green-700" : " "
               }`}
               onClick={() => setSelectedItems("phone")}
             >
               phones
             </li>
             <li
-              className={`cursor-pointer text-2xl hover:underline ${
-                selectedItems == "lap" ? "underline" : " "
+              className={`cursor-pointer text-2xl  ${
+                selectedItems == "lap" ? "text-green-700 border-b-2 border-green-700" : " "
               }`}
               onClick={() => setSelectedItems("lap")}
             >
               Laptops
             </li>
             <li
-              className={`cursor-pointer text-2xl hover:underline ${
-                selectedItems == "airpod" ? "underline" : " "
+              className={`cursor-pointer text-2xl  ${
+                selectedItems == "airpod" ? "text-green-700 border-b-2 border-green-700" : " "
               }`}
               onClick={() => setSelectedItems("airpod")}
             >
               Airpods
             </li>
             <li
-              className={`cursor-pointer text-2xl hover:underline ${
-                selectedItems == "watch" ? "underline" : " "
+              className={`cursor-pointer text-2xl  ${
+                selectedItems == "watch" ? "text-green-700 border-b-2 border-green-700" : " "
               }`}
               onClick={() => setSelectedItems("watch")}
             >

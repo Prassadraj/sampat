@@ -4,6 +4,7 @@ import Item from "../../pages/items/Item";
 import Contact from "../../pages/contact/Contact";
 import { Cursor } from "../Cursor";
 import "animate.css";
+import './home.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlaskVial } from "@fortawesome/free-solid-svg-icons";
 
@@ -13,7 +14,7 @@ function Home() {
       <Nav />
 
       <div className="flex flex-col justify-center mt-48 items-center gap-5">
-        <h1 className="animate__animated animate__bounceInDown animate__delay-1s text-3xl font-bold">
+        <h1 className="text-3xl">
           Empowering Labs with Reliable Equipment
         </h1>
         <img

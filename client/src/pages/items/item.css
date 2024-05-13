@@ -7,3 +7,8 @@
     font-style: normal;
     
 }
+.heading li:hover{
+    color: #337357; 
+    border-bottom-width: 2px;
+    border-bottom-color: #337357;
+  }

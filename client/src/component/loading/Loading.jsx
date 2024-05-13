@@ -8,9 +8,10 @@ function Loading() {
   }, []); // Run this effect only once on component mount
 
   return (
-    <div className='flex justify-center items-center h-screen'>
+    <div className='flex justify-center items-center h-screen '>
       {/* Render the 'l-helix' component with specified attributes */}
       <l-helix
+      
         size="77"
         speed="2.5"
         color="green"

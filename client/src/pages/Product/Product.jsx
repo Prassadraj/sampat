@@ -108,7 +108,7 @@ function Product() {
             </motion.p>
           </div>
         </div>
-        <div className="h-64 mt-10">
+        <div className="h-64 mt-10 ">
           {relatedProducts.length > 0 && (
             <div style={{ transform: `translateY(-${measure - 50}px)` }}>
               <h1 className="ml-52  mb-6 text-3xl">Related Products</h1>

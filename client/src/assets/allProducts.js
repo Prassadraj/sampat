@@ -73,6 +73,7 @@ const allProduct = [
       "https://m.media-amazon.com/images/I/61J9KUops4L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/71e6luY333L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/61W4nsX-yZL._SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81Yzptxk8IL._SX679_.jpg"
     ],
     same: "phone",
   },

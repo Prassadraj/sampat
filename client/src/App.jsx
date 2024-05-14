@@ -8,22 +8,21 @@ import Demo from "./demo/Demo";
 import Home from "./component/Home/Home";
 import Loading from "./component/loading/Loading";
 import { Cursor } from "./component/Cursor";
+import Nav from "./pages/Nav/Nav";
 
 function App() {
   return (
     <ProductDataProvider>
+
       <BrowserRouter>
-        <div>
-          <Routes>
-            <Route element={<Item />} path="/item" />
-            <Route element={<Home />} path="/" />
-            <Route element={<Login />} path="/login" />
-            <Route element={<ProductDetail />} path="/product/:id" />
-            <Route element={<Loading />} path="loading" />
-          </Routes>
-        </div>
+        <Routes>
+          <Route element={<Item />} path="/item" />
+          <Route element={<Home />} path="/" />
+          <Route element={<Login />} path="/login" />
+          <Route element={<ProductDetail />} path="/product/:id" />
+          <Route element={<Loading />} path="loading" />
+        </Routes>
       </BrowserRouter>
-     
     </ProductDataProvider>
   );
 }

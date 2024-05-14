@@ -24,7 +24,9 @@
     "react-fontawesome": "^1.7.1",
     "react-image-magnifiers": "^1.4.0",
     "react-image-magnify": "^2.7.4",
-    "react-router-dom": "^6.23.0"
+    "react-parallax": "^3.5.1",
+    "react-router-dom": "^6.23.0",
+    "react-scroll-parallax": "^3.4.5"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

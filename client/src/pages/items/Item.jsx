@@ -125,9 +125,41 @@ function Item() {
           </div>
         </div>
       </div>
-      <div className="h-96 bg-slate-200 mt-10">
-       
+      <div
+  className="bg-slate-200 mt-10 flex flex-col gap-14 items-center"
+  style={{
+    height: "calc(100vh - 20px)", // Adjusted height to leave space at the bottom
+    padding: "20px 0", // Added padding to top and bottom
+    overflowY: "auto", // Enable vertical scrolling if needed
+  }}
+>
+  <div className="flex justify-center">
+    <h1 className="mt-8 text-3xl">
+      Trending Now: Diagnostics Products Everyone's Talking About
+    </h1>
+  </div>
+  <div
+    className="flex gap-5"
+    style={{
+      overflowX: "auto",
+      width: "80%", // Set width to 100% for responsiveness
+      scrollbarWidth: "thin", // Thin scrollbar (modern browsers)
+      WebkitScrollbarWidth: "thin", // Thin scrollbar for older versions of WebKit browsers
+      padding: "0 0 30px 0", // Added padding to the sides of the container
+    }}
+  >
+    {data.map((items) => (
+      <div
+        className="flex flex-col justify-center items-center gap-5"
+        key={items.id}
+        style={{ minWidth: "300px" }}
+      >
+        <img src={items.img[0]} width="300px" alt="" />
+        <p>{items.name}</p>
       </div>
+    ))}
+  </div>
+</div>
 
     </div>
   );

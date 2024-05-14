@@ -126,7 +126,8 @@ function Item() {
         </div>
       </div>
       <div
-        className="bg-slate-200 mt-10 flex flex-col gap-14 items-center"
+        className="bg-slate-200 mt-10 flex flex-col gap-14 items-center shadow-xl shadow-slate-400 rounded-3xl hover:shadow-2xl 
+        hover:shadow-slate-700 "
         style={{
           height: "80vh", // Adjusted height to leave space at the bottom
           padding: "20px 0", // Added padding to top and bottom
@@ -139,7 +140,8 @@ function Item() {
           </h1>
         </div>
         <div
-          className="flex gap-5"
+          className="flex gap-5 shadow-xl shadow-slate-400 rounded-2xl hover:shadow-2xl 
+          hover:shadow-slate-700 border-solid border-2 border-gray-300"
           style={{
             overflowX: "auto",
             scrollBehavior: "smooth",
@@ -153,17 +155,23 @@ function Item() {
         >
           {data.map((items) => (
             <div
-              className="flex flex-col justify-center items-center gap-5"
+              className="flex flex-col justify-center items-center gap-5 p-5"
               key={items.id}
               style={{ minWidth: "300px" }}
             >
-              <img
-                className="cursor-pointer"
-                src={items.img[0]}
-                width="300px"
-                alt=""
-              />
-              <p>{items.name}</p>
+              <Link
+                to={`/product/${items.id}`}
+                key={items.id}
+                className="flex flex-col items-center gap-4"
+              >
+                <img
+                  className="cursor-pointer border-solid border-2 border-green-100 rounded-md"
+                  src={items.img[0]}
+                  width="300px"
+                  alt=""
+                />
+                <p>{items.name}</p>
+              </Link>
             </div>
           ))}
         </div>

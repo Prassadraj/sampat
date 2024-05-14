@@ -96,6 +96,7 @@ function Product() {
               }}
             />
           </div>
+      
 
           {/* Right column for features */}
           <div

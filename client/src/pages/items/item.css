@@ -9,7 +9,7 @@
 /* Container styling */
 #heading {
   filter: drop-shadow(12px 11px 17px #928b8b);
-  top: 25%;
+  top: 10%;
   left: 5%;
   width: 260px;
   height: calc(70vh - 40px); /* Adjusted for top margin and bottom margin */

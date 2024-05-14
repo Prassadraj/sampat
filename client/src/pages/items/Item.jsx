@@ -18,13 +18,13 @@ function Item() {
     <div>
       <Nav />
 
-      <div className="flex justify-around flex-col items-center mt-36">
+      <div className="flex relative justify-around flex-col items-center mt-36">
         {/* <p className="text-3xl font-bold mb-5 uppercase" id="title">
           Products
         </p> */}
         <div
           id="heading"
-          className="fixed h-screen w-72 top-0 left-10  p-10 rounded-lg"
+          className="absolute h-screen w-72 top-0 left-10  p-10 rounded-lg"
           style={{ backgroundColor: "#f6f6f6" }}
         >
           {/* <p onClick={() => setClick(prev=>!prev)}>all</p> */}
@@ -90,7 +90,7 @@ function Item() {
           hover:shadow-slate-700 "
           style={{
             scrollbarWidth: "none",
-            height: "600px",
+            height: "640px",
             borderTop: "none",
           }}
         >
@@ -125,9 +125,10 @@ function Item() {
           </div>
         </div>
       </div>
-      <div>
-      
+      <div className="h-96 bg-slate-200 mt-10">
+       
       </div>
+
     </div>
   );
 }

@@ -49,20 +49,19 @@ function Product() {
     <div className="absolute top-0" ref={topRef}>
       <div className="">
         <Nav />
-
-        <div className="flex items-center w-full ml-52 overflow-x-hidden mt-40 my-10 gap-8">
+        <div className="flex items-start ml-52 overflow-hidden mt-40 gap-8">
           {/* Left column for image thumbnails */}
           <div
-            className="flex flex-col gap-3 "
+            className="flex flex-col gap-3"
             style={{ transform: `translateX(-${measure}px)` }}
           >
             {product.img.map((img, index) => (
               <img
                 key={index}
                 src={img}
-                className="duration-700 "
+                className="duration-700 mt-0"
                 alt={`Product ${index + 1}`}
-                width="90px"
+                width="60px"
                 onClick={() => setImgURL(img)}
                 style={{
                   cursor: "pointer",
@@ -73,7 +72,7 @@ function Product() {
             ))}
           </div>
 
-          {/* Right column for magnified image */}
+          {/* Middle column for magnified image */}
           <div
             className="w-96 pr-8 relative z-10"
             style={{ transform: `translateY(-${measure * 2}px)` }}
@@ -112,9 +111,10 @@ function Product() {
             </motion.p>
           </div>
         </div>
-        <div className="h-64 mt-10 ">
+
+        <div className=" mt-10 " style={{ height: "20vh" }}>
           {relatedProducts.length > 0 && (
-            <div style={{ transform: `translateY(-${measure - 50}px)` }}>
+            <div style={{ transform: `translateY(-${measure}px)` }}>
               <h1 className="ml-52  mb-6 text-3xl">Related Products</h1>
 
               <div className="grid grid-cols-4 ml-44 gap-10">

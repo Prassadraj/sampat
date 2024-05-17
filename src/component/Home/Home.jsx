@@ -1,12 +1,7 @@
 import React from "react";
 import Nav from "../../pages/Nav/Nav";
-import Item from "../../pages/items/Item";
-import Contact from "../../pages/contact/Contact";
-import { Cursor } from "../Cursor";
 import "animate.css";
 import "./home.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFlaskVial } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   return (

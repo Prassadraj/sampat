@@ -9,7 +9,6 @@ import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import "./nav.css";
 import { Link, useLocation } from "react-router-dom";
 import Loading from "../../component/loading/Loading";
-import { Cursor } from "../../component/Cursor";
 
 function Nav() {
   const [selectedItem, setSelectedItem] = useState("");

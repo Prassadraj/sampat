@@ -7,13 +7,12 @@ import ProductDetail from "./pages/Product/Product";
 import Demo from "./demo/Demo";
 import Home from "./component/Home/Home";
 import Loading from "./component/loading/Loading";
-import { Cursor } from "./component/Cursor";
+
 import Nav from "./pages/Nav/Nav";
 
 function App() {
   return (
     <ProductDataProvider>
-
       <BrowserRouter>
         <Routes>
           <Route element={<Item />} path="/item" />

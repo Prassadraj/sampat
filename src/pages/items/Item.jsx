@@ -18,15 +18,16 @@ function Item() {
       : data.filter((datas) => datas.same == selectedItems);
 
   return (
-    <div>
+    <div style={{ scrollBehavior: "smooth" }}>
       <Nav />
       <Parallax
-        className="scroll-smooth"
+        className="scroll-smooth
+        "
         strength={800}
-        style={{ width: "100%",objectfit: "contain"}}
+        style={{ width: "100%", objectfit: "contain" }}
         bgImage="https://static7.depositphotos.com/1194063/680/i/450/depositphotos_6809431-stock-photo-laboratory.jpg"
       >
-        <div className="flex relative justify-around flex-col items-center mt-36 mb-10">
+        <div className="flex relative justify-evenly gap-10 items-center mt-36 mb-10">
           {/* <p className="text-3xl font-bold mb-5 uppercase" id="title">
           Products
         </p> */}
@@ -95,7 +96,7 @@ function Item() {
 
           <div
             className="overflow-y-scroll shadow-xl shadow-slate-400 rounded-3xl hover:shadow-2xl 
-          hover:shadow-slate-700  "
+          hover:shadow-slate-700 ml-20  "
             style={{
               scrollbarWidth: "none",
               height: "640px",
@@ -138,25 +139,18 @@ function Item() {
       <Parallax
         strength={800}
         bgImage="https://i.pinimg.com/originals/a2/f5/3f/a2f53f1377b24b3171814e4e32675835.jpg"
-        className="relative"
+        className="relative scroll-smooth"
         style={{ height: "70vh", width: "100%" }}
       >
         <div
-          className=" mt-10 flex flex-col gap-14 items-center shadow-xl shadow-slate-400 rounded-3xl hover:shadow-2xl 
+          className=" mt-5 flex flex-col gap-0  items-center shadow-xl shadow-slate-400 rounded-3xl hover:shadow-2xl 
         hover:shadow-slate-700 "
           style={{
             height: "100vh", // Adjusted height to leave space at the bottom
-            padding: "20px 0", // Added padding to top and bottom
+            padding: "0px 0", // Added padding to top and bottom
             overflowY: "auto", // Enable vertical scrolling if needed
           }}
         >
-          {/* Content */}
-          {/* <div className="flex justify-center">
-            <h1 className="mt-8 text-3xl">
-              Trending Now: Diagnostics Products Everyone's Talking About
-            </h1>
-          </div> */}
-
           <div
             className="flex gap-5 shadow-xl shadow-slate-400 rounded-2xl hover:shadow-2xl 
           hover:shadow-slate-700 border-solid border-2 border-gray-300 bg-slate-100"
@@ -166,7 +160,7 @@ function Item() {
               width: "80%", // Set width to 80% for responsiveness
               scrollbarWidth: "thin", // Thin scrollbar (modern browsers)
               WebkitScrollbarWidth: "thin", // Thin scrollbar for older versions of WebKit browsers
-              padding: "10px 10px 30px 10px", // Added padding to the sides and bottom of the container
+              padding: "5px 5px 8px 5px", // Added padding to the sides and bottom of the container
               scrollbarColor: "#48bb98 slategray", // Color for the scrollbar
               scrollbarTrackColor: "slategray", // Color for the scrollbar track
             }}

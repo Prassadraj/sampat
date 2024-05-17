@@ -50,7 +50,7 @@ function Product() {
       <div className="">
         <Nav />
 
-        <div className="flex items-center w-full ml-52 overflow-x-hidden mt-52 my-10 gap-8">
+        <div className="flex items-center w-full ml-52 overflow-x-hidden mt-40 my-10 gap-8">
           {/* Left column for image thumbnails */}
           <div
             className="flex flex-col gap-3 "

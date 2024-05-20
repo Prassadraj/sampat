@@ -11,6 +11,7 @@ import Loading from "./component/loading/Loading";
 import Nav from "./pages/Nav/Nav";
 
 function App() {
+  // kk
   return (
     <ProductDataProvider>
       <BrowserRouter>

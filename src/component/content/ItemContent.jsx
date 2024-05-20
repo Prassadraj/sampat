@@ -6,7 +6,6 @@ function ItemContent() {
       <h1 className=" text-3xl uppercase">
         Trending Now: Diagnostics Products Everyone's Talking About
       </h1>
-      <style>#head{}</style>
     </div>
   );
 }

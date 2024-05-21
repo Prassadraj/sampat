@@ -118,11 +118,11 @@ function Item() {
                       width="250px"
                       className="block cursor-pointer"
                     />
-                    <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                    <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out">
                       <p
                         className=" text-lg font-bold"
                         style={{
-                          color: "#08f58e",
+                          color: "skyblue",
                         }}
                       >
                         View Details

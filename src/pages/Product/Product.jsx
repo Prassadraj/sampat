@@ -130,7 +130,7 @@ function Product() {
                       className="flex flex-col items-center"
                     >
                       <img
-                        src={products.img}
+                        src={products.img[0]}
                         alt=""
                         onClick={() => setImgURL(products.img)}
                         className="hover:opacity-90 shadow-lg transition-opacity duration-300 ease-in-out"

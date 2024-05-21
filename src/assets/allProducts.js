@@ -1,7 +1,7 @@
 const allProduct = [
   {
     id: 1,
-    name: "Apple AirPods Pro",
+    name: "TURBOCHEM MAGNA",
     features: ` Constant throughput of 300 Tests/hour
     • Discrete random access Bench Top Biochemistry analyzer
     • Independent Probe for Reagents and Sample.
@@ -18,12 +18,16 @@ const allProduct = [
   },
   {
     id: 2,
-    name: "Apple 2024 MacBook Air 15",
-    features: `Supercharged by M3 — The blazing-fast MacBook Air with the M3 chip is a super-portable laptop that sails through work and play.
-    PORTABLE DESIGN — Lightweight and just over 1 cm thin, so you can take MacBook Air anywhere you go.
-    GET MORE DONE FASTER — The powerful 8-core CPU and 10-core GPU of the Apple M3 chip keep things running smoothly.`,
+    name: "TURBOCHEM PRIME",
+    features: ` Constant throughput of 180 Tests/hour
+    • Discrete random access Bench Top Biochemistry analyzer
+    • Probe crash prevention with high sensitive liquid level detection of sample/reagents
+    • High precision results with Low CV%
+    • On board laundry with 5 statges of washing
+    • Intelligent QC management
+    • 60 Reagent position assures that the more no.of assays could be performed`,
     img: [
-      "https://m.media-amazon.com/images/I/71zbUS9KpQL._SX679_.jpg",
+      "https://cpcdiagnostics.in/wp-content/uploads/2022/05/Turbo-chem-prime-01.webp",
       "https://m.media-amazon.com/images/I/61vxmI39VnL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/612JGmBkmQL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/6194n0YSBXL._SX679_.jpg",
@@ -110,12 +114,15 @@ const allProduct = [
   },
   {
     id: 8,
-    name: "Samsung Galaxy Book3 ",
-    features: `Processor: 13th Generation Intel Core i5-1340P processor (1.9 GHz up to 4.6 GHz 12 MB L3 Cache) | Memory: 16 GB LPDDR5 Memory | Storage: 512 GB NVMe SSD | Intel Iris Xe Graphics
-    Operating System: Windows 11 Home | Pre-Installed Software: MS Office Home & Student 2021, Galaxy Ecosystem Apps
-    Display: 14" (35.56 cm), Dynamic AMOLED 2X, 3K WQXGA+ (2880 x 1800) resolution | 16:10 Aspect Ratio | 120Hz | 500nits HDR |Design: Aluminum body with 11.3mm thinness and 1.17kg`,
+    name: "TURBOSTAT PLUS",
+    features: `• Photometric linearity range from 0 to 4.0 Abs
+    • 8 filters standard wavelength and 2 more free position
+    • Windows-based user-friendly interface with high speed CPU processor
+    • Real-time reaction monitoring graph for each test
+    • Interactive test programs upto 300 parameters
+    • Sample Result storage up to 2,00,000`,
     img: [
-      "https://m.media-amazon.com/images/I/71Dh450OVpL._SX679_.jpg",
+      "https://cpcdiagnostics.in/wp-content/uploads/2023/03/semi-automated-chemistry-analyzer-600x600.webp",
       "https://m.media-amazon.com/images/I/718zhO0N94L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/71y8LecDWqL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/71FDmtTBVyL._SX679_.jpg",
@@ -125,14 +132,16 @@ const allProduct = [
   },
   {
     id: 9,
-    name: "Samsung Galaxy Book4",
-    features: `Processor: Intel Core i7 Processor 1355U (1.7 GHz Up to 5.0 GHz 12 MB Smart Cache) | Memory: 16 GB LPDDR4X Memory | Storage: 512GB SSD| Intel Iris XE Graphics
-    Operating System: Windows 11 Home | Pre-Installed Software: MS Office Home & Student 2021, Galaxy Ecosystem Apps
-    Display: 15.6" Inch (39.6cm) Full HD, (1920 x 1080) Resolution | 16:9 Aspect Ratio | 300 Nits Brightness | 60Hz Refresh Rate
-    Ports: 2 USB Type-C, 2 USB 3.2 Type-A, 1 HDMI, 1 MicroSD Card Reader, 1 RJ45 LAN Port | Wi-Fi 6 | Without CD-drive |Battery: 54 Watt Hours, Charger: 45W USB Type-C Adapter
-    Camera: 1MP with 720p| Dolby Atmos | Microphone: 1 Headphone out/Mic-in Combo | FingerPrint Reader`,
+    name: "TURBOSTAT SEMI",
+    features: `• Photometric linearity range from 0 to 4.0 Abs
+    • 8 filters standard wavelength and 2 more free position
+    • Windows-based user-friendly interface with high speed CPU processor
+    • Analysis method: Endpoint, Kinetic, Fixed time, Turbidimetry, Multipoint, Factor etc.,
+    • Real-time reaction monitoring graph for each test
+    • Interactive test menu with 300 parameters
+    • Result storage up to 2,00,000`,
     img: [
-      "https://m.media-amazon.com/images/I/71fjCdvBVUL._SX679_.jpg",
+      "https://cpcdiagnostics.in/wp-content/uploads/2022/05/Turbo-stat-01-600x600.webp",
       "https://m.media-amazon.com/images/I/6160lICVkhL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/61+Xpl1rD0L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51pLA+hA5XL._SX679_.jpg",

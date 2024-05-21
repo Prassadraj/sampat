@@ -1,12 +1,21 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 function ItemContent() {
   return (
-    <div className="flex justify-center  items-center p-7 " id="head">
-      <h1 className=" text-3xl uppercase">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ margin: "-500px", once: true }}
+      className="flex justify-center items-center p-7"
+      style={{ backgroundColor: "#b388eb", color: "white" }}
+      id="head"
+      onViewportEnter={() => console.log("enter")}
+    >
+      <h1 className="text-3xl uppercase">
         Trending Now: Diagnostics Products Everyone's Talking About
       </h1>
-    </div>
+    </motion.div>
   );
 }
 

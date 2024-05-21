@@ -113,7 +113,7 @@ function Item() {
                     style={{ borderColor: "lightgray", borderWidth: "1px" }}
                   >
                     <img
-                      src={product.img}
+                      src={product.img[0]}
                       alt=""
                       width="250px"
                       className="block cursor-pointer"

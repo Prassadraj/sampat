@@ -2,13 +2,13 @@ const allProduct = [
   {
     id: 1,
     name: "Apple AirPods Pro",
-    features: `The speakers inside the EarPods have been engineered to maximise sound output, which means you get high-quality audio.
-    The EarPods (USB-C) also include a built-in remote that lets you adjust the volume, control the playback of music and video, and answer or end calls with a press of the remote.
-    Designed by Apple
-    Deeper, richer bass tones
-    Greater protection from sweat and water`,
+    features: ` Constant throughput of 300 Tests/hour
+    • Discrete random access Bench Top Biochemistry analyzer
+    • Independent Probe for Reagents and Sample.
+    • Dedicated mixer which enhances faster mixing of reagents and sample
+`,
     img: [
-      "https://m.media-amazon.com/images/I/61SUj2aKoEL._SX679_.jpg",
+      "https://cpcdiagnostics.in/wp-content/uploads/2022/05/Turbochem-Magna-600x600.webp",
       "https://m.media-amazon.com/images/I/61sRKTAfrhL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51emillNpWL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51+vJkbGtJL._SX679_.jpg",
@@ -73,7 +73,7 @@ const allProduct = [
       "https://m.media-amazon.com/images/I/61J9KUops4L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/71e6luY333L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/61W4nsX-yZL._SX679_.jpg",
-      "https://m.media-amazon.com/images/I/81Yzptxk8IL._SX679_.jpg"
+      "https://m.media-amazon.com/images/I/81Yzptxk8IL._SX679_.jpg",
     ],
     same: "phone",
   },

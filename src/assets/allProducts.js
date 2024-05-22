@@ -26,7 +26,10 @@ const allProduct = [
     • High precision results with Low CV%
     • On board laundry with 5 statges of washing
     • Intelligent QC management
-    • 60 Reagent position assures that the more no.of assays could be performed`,
+    • 60 Reagent position assures that the more no.of assays could be performed
+    • Bidirectional LIS connectivity
+    • Minimal consumable cost for instrument maintanence
+    • Remote maintanence, interactive trouble shooting with online application support`,
     img: [
       "https://cpcdiagnostics.in/wp-content/uploads/2022/05/Turbo-chem-prime-01.webp",
       "https://m.media-amazon.com/images/I/61vxmI39VnL._SX679_.jpg",
@@ -116,12 +119,16 @@ const allProduct = [
   {
     id: 8,
     name: "TURBOSTAT PLUS",
-    features: `• Photometric linearity range from 0 to 4.0 Abs
+    features: `Photometric linearity range from 0 to 4.0 Abs
     • 8 filters standard wavelength and 2 more free position
     • Windows-based user-friendly interface with high speed CPU processor
     • Real-time reaction monitoring graph for each test
     • Interactive test programs upto 300 parameters
-    • Sample Result storage up to 2,00,000`,
+    • Sample Result storage up to 2,00,000
+    • Built-in incubator to maintain the temperature for sample testing
+    • 7” touch screen TFT LCD display
+    • 4 USB Host, 1 USB slave and 1 Ethernet port for efficient support
+    • Built-in thermal printer`,
     img: [
       "https://cpcdiagnostics.in/wp-content/uploads/2023/03/semi-automated-chemistry-analyzer-600x600.webp",
       "https://m.media-amazon.com/images/I/718zhO0N94L._SX679_.jpg",
@@ -134,13 +141,16 @@ const allProduct = [
   {
     id: 9,
     name: "TURBOSTAT SEMI",
-    features: `• Photometric linearity range from 0 to 4.0 Abs
+    features: ` Photometric linearity range from 0 to 4.0 Abs
     • 8 filters standard wavelength and 2 more free position
     • Windows-based user-friendly interface with high speed CPU processor
     • Analysis method: Endpoint, Kinetic, Fixed time, Turbidimetry, Multipoint, Factor etc.,
     • Real-time reaction monitoring graph for each test
     • Interactive test menu with 300 parameters
-    • Result storage up to 2,00,000`,
+    • Result storage up to 2,00,000
+    • 7” touch screen TFT LCD display
+    • 4 USB Host, 1 USB slave and 1 Ethernet port for efficient support
+    • Built-in thermal printer.`,
     img: [
       "https://m.media-amazon.com/images/I/6160lICVkhL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/6160lICVkhL._SX679_.jpg",

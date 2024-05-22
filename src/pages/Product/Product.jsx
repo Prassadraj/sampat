@@ -60,6 +60,7 @@ function Product() {
         <Nav />
         <div className="flex items-start ml-52 overflow-hidden mt-40 gap-8">
           {/* Left column for image thumbnails */}
+
           <div
             className="flex flex-col gap-3"
             style={{ transform: `translateX(-${measure}px)` }}

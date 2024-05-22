@@ -161,8 +161,8 @@ function Item() {
               scrollbarWidth: "thin", // Thin scrollbar (modern browsers)
               WebkitScrollbarWidth: "thin", // Thin scrollbar for older versions of WebKit browsers
               padding: "5px 5px 8px 5px", // Added padding to the sides and bottom of the container
-              scrollbarColor: "#48bb98 slategray", // Color for the scrollbar
-              scrollbarTrackColor: "slategray", // Color for the scrollbar track
+              scrollbarColor: "green slategray", // Color for the scrollbar
+              scrollbarTrackColor: "black", // Color for the scrollbar track
             }}
           >
             {data.map((items) => (

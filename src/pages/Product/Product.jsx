@@ -17,8 +17,6 @@ function Product() {
   const [measure, setMeasure] = useState(0);
 
   const topRef = useRef(null);
-  const featureRef = useRef(null); // Add this line
-
   if (!product) {
     return <div className="text-red-500">Product not found</div>;
   }
@@ -29,9 +27,6 @@ function Product() {
   const handleRelatedProductClick = () => {
     if (topRef.current) {
       topRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-    if (featureRef.current) {
-      featureRef.current.scrollTop = 0; // Add this line
     }
   };
 
@@ -117,7 +112,6 @@ function Product() {
               height: "70vh",
               overflowY: "scroll",
             }}
-            ref={featureRef} // Add this line
           >
             <h2 className="text-xl font-semibold mb-4">{product.name}</h2>
             <motion.p
@@ -131,7 +125,7 @@ function Product() {
           </div>
         </div>
 
-        <div className="mt-10" style={{ height: "20vh" }}>
+        <div className="mt-10" style={{ height: "10vh" }}>
           {relatedProducts.length > 0 && (
             <div style={{ transform: `translateY(-${measure}px)` }}>
               <h1 className="ml-52 mb-6 text-3xl">Related Products</h1>

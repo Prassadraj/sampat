@@ -13,7 +13,7 @@ function Product() {
   const { id } = useParams();
   const product = data.find((product) => product.id === parseInt(id));
   const [imgURL, setImgURL] = useState(product.img[0]);
-  const navigation = useNavigate();
+  const navigate = useNavigate();
   const [measure, setMeasure] = useState(0);
 
   const topRef = useRef(null);
@@ -21,33 +21,42 @@ function Product() {
     return <div className="text-red-500">Product not found</div>;
   }
   const relatedProducts = data.filter(
-    (items) => items.same == product.same && items.id !== product.id
+    (items) => items.same === product.same && items.id !== product.id
   );
+
   const handleRelatedProductClick = () => {
     if (topRef.current) {
       topRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   const scroll = () => {
     setMeasure(window.scrollY);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", scroll);
-
     return () => {
       window.removeEventListener("scroll", scroll);
     };
   }, []);
+
   useEffect(() => {
     if (topRef.current) {
       topRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [id]);
 
+  useEffect(() => {
+    // Reset imgURL to the first image of the new product
+    if (product) {
+      setImgURL(product.img[0]);
+    }
+  }, [product]);
+
   return (
     <div className="absolute top-0" ref={topRef}>
-      <div className="">
+      <div>
         <Nav />
         <div className="flex items-start ml-52 overflow-hidden mt-40 gap-8">
           {/* Left column for image thumbnails */}
@@ -112,10 +121,10 @@ function Product() {
           </div>
         </div>
 
-        <div className=" mt-10 " style={{ height: "20vh" }}>
+        <div className="mt-10" style={{ height: "20vh" }}>
           {relatedProducts.length > 0 && (
             <div style={{ transform: `translateY(-${measure}px)` }}>
-              <h1 className="ml-52  mb-6 text-3xl">Related Products</h1>
+              <h1 className="ml-52 mb-6 text-3xl">Related Products</h1>
 
               <div className="grid grid-cols-4 ml-44 gap-10">
                 {relatedProducts.map((products) => (
@@ -125,10 +134,7 @@ function Product() {
                     onClick={handleRelatedProductClick}
                     className="hover:opacity-75 transition-opacity duration-300 ease-in-out"
                   >
-                    <div
-                      key={products.id}
-                      className="flex flex-col items-center"
-                    >
+                    <div className="flex flex-col items-center">
                       <img
                         src={products.img[0]}
                         alt=""

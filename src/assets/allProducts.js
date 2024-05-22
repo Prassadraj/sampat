@@ -142,7 +142,7 @@ const allProduct = [
     • Interactive test menu with 300 parameters
     • Result storage up to 2,00,000`,
     img: [
-      TurboStat,
+      "https://m.media-amazon.com/images/I/6160lICVkhL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/6160lICVkhL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/61+Xpl1rD0L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51pLA+hA5XL._SX679_.jpg",

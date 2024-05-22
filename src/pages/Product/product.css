@@ -1,8 +1,7 @@
 /* Global Styles */
 
 body {
-  font-family: "Poppins", sans-serif;
-  scrollbar-width: none; /* Hide scrollbar on Firefox */
+  scrollbar-width: none;
 }
 
 /* Specific Component Styles */

@@ -1,4 +1,4 @@
-import TurboStat from "../images/TurboStat.jpg";
+import product from "../images/product.png";
 const allProduct = [
   {
     id: 1,
@@ -130,7 +130,7 @@ const allProduct = [
     • 4 USB Host, 1 USB slave and 1 Ethernet port for efficient support
     • Built-in thermal printer`,
     img: [
-      "https://cpcdiagnostics.in/wp-content/uploads/2023/03/semi-automated-chemistry-analyzer-600x600.webp",
+      product,
       "https://m.media-amazon.com/images/I/718zhO0N94L._SX679_.jpg",
       "https://m.media-amazon.com/images/I/71y8LecDWqL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/71FDmtTBVyL._SX679_.jpg",

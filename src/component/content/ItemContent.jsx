@@ -8,7 +8,7 @@ function ItemContent() {
       whileInView={{ opacity: 1 }}
       viewport={{ margin: "-500px", once: true }}
       className="flex justify-center items-center p-7"
-      style={{ backgroundColor: "#b388eb", color: "white" }}
+      style={{ backgroundColor: "black", color: "white" }}
       id="head"
       onViewportEnter={() => console.log("enter")}
     >

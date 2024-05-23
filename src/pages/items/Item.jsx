@@ -21,7 +21,7 @@ function Item() {
     <div style={{ scrollBehavior: "smooth" }}>
       <Nav />
       <Parallax
-        className="scroll-smooth
+        className="scroll-smooth mix-blend-multiply
         "
         strength={800}
         style={{
@@ -30,14 +30,15 @@ function Item() {
           backgroundPosition: "center",
         }}
         bgImage="\src\images\img2.jpg"
+        blur={{ min: -15, max: 15 }}
       >
-        <div className="flex relative justify-evenly gap-10 items-center mt-36 mb-10">
+        <div className="flex relative justify-evenly gap-10 items-center mt-36 mb-10 ">
           {/* <p className="text-3xl font-bold mb-5 uppercase" id="title">
           Products
         </p> */}
           <div
             id="heading"
-            className="absolute h-screen w-72 top-0 left-10  p-10 rounded-lg"
+            className="absolute h-screen w-72 top-0 left-10  p-10 rounded-lg "
             style={{ color: "white" }}
           >
             {/* <p onClick={() => setClick(prev=>!prev)}>all</p> */}
@@ -114,14 +115,14 @@ hover:shadow-slate-700 ml-20"
                     to={`/product/${product.id}`}
                     key={product.id}
                     className="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg hover:translate-y-1  "
-                    style={{ borderColor: "lightgray", borderWidth: "1px" }}
+                    // style={{ borderColor: "lightgray", borderWidth: "1px" }}
                   >
                     <div>
                       <img
                         src={product.img[0]}
                         alt=""
                         width="250px"
-                        className="block cursor-pointer "
+                        className="block cursor-pointer opacity-90"
                       />
                     </div>
 
@@ -160,7 +161,7 @@ hover:shadow-slate-700 ml-20"
         >
           <div
             className="flex gap-5 shadow-xl shadow-slate-400 rounded-2xl hover:shadow-2xl 
-          hover:shadow-slate-700 border-solid border-2 border-gray-300 bg-slate-100"
+          hover:shadow-slate-700 border-solid border-2 border-gray-300 opacity-85"
             style={{
               overflowX: "auto",
               scrollBehavior: "smooth",
@@ -168,8 +169,7 @@ hover:shadow-slate-700 ml-20"
               scrollbarWidth: "thin", // Thin scrollbar (modern browsers)
               WebkitScrollbarWidth: "thin", // Thin scrollbar for older versions of WebKit browsers
               padding: "5px 5px 8px 5px", // Added padding to the sides and bottom of the container
-              scrollbarColor: "green slategray", // Color for the scrollbar
-              scrollbarTrackColor: "black", // Color for the scrollbar track
+              scrollbarColor: "black gray", // Color for the scrollbar
             }}
           >
             {data.map((items) => (
@@ -184,7 +184,7 @@ hover:shadow-slate-700 ml-20"
                   className="flex flex-col items-center gap-4"
                 >
                   <img
-                    className="cursor-pointer border-solid border-2 border-green-100 rounded-md"
+                    className="cursor-pointer rounded-md"
                     src={items.img[0]}
                     width="300px"
                     alt=""

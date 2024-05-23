@@ -29,7 +29,7 @@ function Item() {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        bgImage="\src\images\background1.jpg"
+        bgImage="\src\images\img2.jpg"
       >
         <div className="flex relative justify-evenly gap-10 items-center mt-36 mb-10">
           {/* <p className="text-3xl font-bold mb-5 uppercase" id="title">
@@ -38,7 +38,7 @@ function Item() {
           <div
             id="heading"
             className="absolute h-screen w-72 top-0 left-10  p-10 rounded-lg"
-            style={{ backgroundColor: "#f6f6f6" }}
+            style={{ color: "white" }}
           >
             {/* <p onClick={() => setClick(prev=>!prev)}>all</p> */}
             <ul
@@ -100,31 +100,34 @@ function Item() {
 
           <div
             className="overflow-y-scroll shadow-xl shadow-slate-400 rounded-3xl hover:shadow-2xl 
-          hover:shadow-slate-700 ml-20  "
+hover:shadow-slate-700 ml-20"
             style={{
               scrollbarWidth: "none",
               height: "640px",
               borderTop: "none",
             }}
           >
-            <div className="flex justify-center  p-5 m-10 ml-56">
-              <div className="grid grid-cols-3 gap-5 max-w-screen-lg">
+            <div className="flex justify-center p-5 m-10 ml-56">
+              <div className="grid grid-cols-3 gap-5 max-w-screen-lg ">
                 {productsToShow.map((product) => (
                   <Link
                     to={`/product/${product.id}`}
                     key={product.id}
-                    className="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg hover:translate-y-1"
+                    className="relative overflow-hidden rounded-lg shadow-md hover:shadow-lg hover:translate-y-1  "
                     style={{ borderColor: "lightgray", borderWidth: "1px" }}
                   >
-                    <img
-                      src={product.img[0]}
-                      alt=""
-                      width="250px"
-                      className="block cursor-pointer"
-                    />
+                    <div>
+                      <img
+                        src={product.img[0]}
+                        alt=""
+                        width="250px"
+                        className="block cursor-pointer "
+                      />
+                    </div>
+
                     <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-60 opacity-0 hover:opacity-100 transition-opacity duration-300 ease-in-out">
                       <p
-                        className=" text-lg font-bold"
+                        className="text-lg font-bold"
                         style={{
                           color: "skyblue",
                         }}

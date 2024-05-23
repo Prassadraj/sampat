@@ -14,7 +14,7 @@
   width: 260px;
   height: calc(60vh - 20px); /* Adjusted for top margin and bottom margin */
   padding: 20px;
-  background-color: #ffffff; /* White background */
+  /* background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
   overflow-y: auto; /* Enable scrolling if needed */
@@ -36,7 +36,7 @@
   position: relative;
   font-size: 18px;
   font-weight: 500;
-  color: #4a5568; /* Default text color */
+  /* Default text color */
   transition: color 0.3s ease-in-out;
 }
 

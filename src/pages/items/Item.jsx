@@ -24,8 +24,12 @@ function Item() {
         className="scroll-smooth
         "
         strength={800}
-        style={{ width: "100%", objectfit: "contain" }}
-        bgImage="https://static7.depositphotos.com/1194063/680/i/450/depositphotos_6809431-stock-photo-laboratory.jpg"
+        style={{
+          width: "100%",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+        bgImage="\src\images\background1.jpg"
       >
         <div className="flex relative justify-evenly gap-10 items-center mt-36 mb-10">
           {/* <p className="text-3xl font-bold mb-5 uppercase" id="title">

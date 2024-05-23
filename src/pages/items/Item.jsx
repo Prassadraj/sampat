@@ -161,7 +161,7 @@ hover:shadow-slate-700 ml-20"
         >
           <div
             className="flex gap-5 shadow-xl shadow-slate-400 rounded-2xl hover:shadow-2xl 
-          hover:shadow-slate-700 border-solid border-2 border-gray-300 opacity-85"
+          hover:shadow-slate-700 border-solid border-2 border-gray-300 opacity-80"
             style={{
               overflowX: "auto",
               scrollBehavior: "smooth",
@@ -184,7 +184,7 @@ hover:shadow-slate-700 ml-20"
                   className="flex flex-col items-center gap-4"
                 >
                   <img
-                    className="cursor-pointer rounded-md"
+                    className="cursor-pointer border-solid border-2 border-green-100 rounded-md"
                     src={items.img[0]}
                     width="300px"
                     alt=""

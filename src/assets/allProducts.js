@@ -1,4 +1,5 @@
 import product from "../images/product.png";
+import product1 from "../images/product2.png";
 const allProduct = [
   {
     id: 1,
@@ -9,7 +10,7 @@ const allProduct = [
     • Dedicated mixer which enhances faster mixing of reagents and sample
 `,
     img: [
-      "https://cpcdiagnostics.in/wp-content/uploads/2022/05/Turbochem-Magna-600x600.webp",
+      product1,
       "https://m.media-amazon.com/images/I/61sRKTAfrhL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51emillNpWL._SX679_.jpg",
       "https://m.media-amazon.com/images/I/51+vJkbGtJL._SX679_.jpg",

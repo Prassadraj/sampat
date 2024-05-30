@@ -27,7 +27,8 @@
     "react-parallax": "^3.5.1",
     "react-router-dom": "^6.23.0",
     "react-scroll-parallax": "^3.4.5",
-    "react-use-measure": "^2.1.1"
+    "react-use-measure": "^2.1.1",
+    "split-type": "^0.3.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
